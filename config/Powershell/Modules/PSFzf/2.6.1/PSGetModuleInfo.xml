@@ -1,0 +1,168 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PSFzf</S>
+      <Version N="Version">2.6.1</Version>
+      <S N="Type">Module</S>
+      <S N="Description">A thin wrapper around Fzf (https://github.com/junegunn/fzf).  If PSReadline is loaded, this wrapper registers Fzf with the keyboard chord Ctrl+t.</S>
+      <S N="Author">Michael Kelley</S>
+      <S N="CompanyName">MichaelKelley</S>
+      <S N="Copyright">(c) 2020. All rights reserved.</S>
+      <DT N="PublishedDate">2024-05-09T14:43:44+01:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2024-05-10T18:47:49.5278911+01:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <Nil N="ProjectUri" />
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Enable-PsFzfAliases</S>
+                <S>Invoke-FuzzyEdit</S>
+                <S>Invoke-FuzzyFasd</S>
+                <S>Invoke-FuzzyGitStatus</S>
+                <S>Invoke-FuzzyHistory</S>
+                <S>Invoke-FuzzyKillProcess</S>
+                <S>Invoke-FuzzyScoop</S>
+                <S>Invoke-FuzzySetLocation</S>
+                <S>Invoke-FuzzyZLocation</S>
+                <S>Invoke-Fzf</S>
+                <S>Invoke-FzfTabCompletion</S>
+                <S>Invoke-PsFzfGitBranches</S>
+                <S>Invoke-PsFzfGitFiles</S>
+                <S>Invoke-PsFzfGitHashes</S>
+                <S>Invoke-PsFzfGitStashes</S>
+                <S>Invoke-PsFzfGitTags</S>
+                <S>Invoke-PsFzfRipgrep</S>
+                <S>Set-LocationFuzzyEverything</S>
+                <S>Set-PsFzfOption</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Enable-PsFzfAliases</S>
+                <S>Invoke-FuzzyEdit</S>
+                <S>Invoke-FuzzyFasd</S>
+                <S>Invoke-FuzzyGitStatus</S>
+                <S>Invoke-FuzzyHistory</S>
+                <S>Invoke-FuzzyKillProcess</S>
+                <S>Invoke-FuzzyScoop</S>
+                <S>Invoke-FuzzySetLocation</S>
+                <S>Invoke-FuzzyZLocation</S>
+                <S>Invoke-Fzf</S>
+                <S>Invoke-FzfTabCompletion</S>
+                <S>Invoke-PsFzfGitBranches</S>
+                <S>Invoke-PsFzfGitFiles</S>
+                <S>Invoke-PsFzfGitHashes</S>
+                <S>Invoke-PsFzfGitStashes</S>
+                <S>Invoke-PsFzfGitTags</S>
+                <S>Invoke-PsFzfRipgrep</S>
+                <S>Set-LocationFuzzyEverything</S>
+                <S>Set-PsFzfOption</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2020. All rights reserved.</S>
+          <S N="description">A thin wrapper around Fzf (https://github.com/junegunn/fzf).  If PSReadline is loaded, this wrapper registers Fzf with the keyboard chord Ctrl+t.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">0</S>
+          <S N="downloadCount">102743</S>
+          <S N="packageSize">64330</S>
+          <S N="published">09/05/2024 14:43:44 +01:00</S>
+          <S N="created">09/05/2024 14:43:44 +01:00</S>
+          <S N="lastUpdated">09/05/2024 14:43:44 +01:00</S>
+          <S N="tags">PSModule PSFunction_Enable-PsFzfAliases PSCommand_Enable-PsFzfAliases PSFunction_Invoke-FuzzyEdit PSCommand_Invoke-FuzzyEdit PSFunction_Invoke-FuzzyFasd PSCommand_Invoke-FuzzyFasd PSFunction_Invoke-FuzzyGitStatus PSCommand_Invoke-FuzzyGitStatus PSFunction_Invoke-FuzzyHistory PSCommand_Invoke-FuzzyHistory PSFunction_Invoke-FuzzyKillProcess PSCommand_Invoke-FuzzyKillProcess PSFunction_Invoke-FuzzyScoop PSCommand_Invoke-FuzzyScoop PSFunction_Invoke-FuzzySetLocation PSCommand_Invoke-FuzzySetLocation PSFunction_Invoke-FuzzyZLocation PSCommand_Invoke-FuzzyZLocation PSFunction_Invoke-Fzf PSCommand_Invoke-Fzf PSFunction_Invoke-FzfTabCompletion PSCommand_Invoke-FzfTabCompletion PSFunction_Invoke-PsFzfGitBranches PSCommand_Invoke-PsFzfGitBranches PSFunction_Invoke-PsFzfGitFiles PSCommand_Invoke-PsFzfGitFiles PSFunction_Invoke-PsFzfGitHashes PSCommand_Invoke-PsFzfGitHashes PSFunction_Invoke-PsFzfGitStashes PSCommand_Invoke-PsFzfGitStashes PSFunction_Invoke-PsFzfGitTags PSCommand_Invoke-PsFzfGitTags PSFunction_Invoke-PsFzfRipgrep PSCommand_Invoke-PsFzfRipgrep PSFunction_Set-LocationFuzzyEverything PSCommand_Set-LocationFuzzyEverything PSFunction_Set-PsFzfOption PSCommand_Set-PsFzfOption PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-05-09T14:43:44Z</S>
+          <S N="NormalizedVersion">2.6.1</S>
+          <S N="Authors">Michael Kelley</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PSFzf.nuspec|PSFzf.Base.ps1|PSFzf.dll|PSFzf.psm1|en-US\PSFzf.psm1-help.xml|helpers\PsFzfGitFiles-GitAdd.sh|PSFzf.Functions.ps1|PSFzf.pssproj|helpers\GetProcessesList.ps1|helpers\PsFzfGitFiles-GitReset.sh|PSFzf.Git.ps1|PSFzf.TabExpansion.ps1|helpers\Join-ModuleFiles.ps1|helpers\PsFzfGitFiles-Preview.sh|PSFzf.tests.ps1|helpers\PsFzfGitBranches-Preview.sh|helpers\PsFzfGitHashes-Preview.sh|PSFzf.psd1|PSScriptAnalyzerSettings.psd1|helpers\PSFzfGitBranches.ps1|helpers\PsFzfTabExpansion-Parameter.ps1|en-US\about_PSFzf.help.txt|helpers\PsFzfGitBranches.sh|helpers\PsFzfTabExpansion-Preview.ps1</S>
+          <S N="GUID">9454f107-c8bd-4fb9-9098-41a619ad0654</S>
+          <S N="CompanyName">Unknown</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\Taran\Documents\PowerShell\Modules\PSFzf\2.6.1</S>
+    </MS>
+  </Obj>
+</Objs>

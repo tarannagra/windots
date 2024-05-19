@@ -1,0 +1,7 @@
+.vscode/
+copy_from/
+
+# removing grabbed files/folders
+grammarly-languageserver
+scoop
+spicetify
