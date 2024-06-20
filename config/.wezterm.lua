@@ -1,5 +1,3 @@
--- Taran's WezTerm config!
-
 local wezterm = require 'wezterm'
 local muz = wezterm.mux
 local act = wezterm.action

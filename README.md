@@ -1,6 +1,6 @@
 # Taran's windots
 
-Hello! Welcome to my showcase of my Windows dotfiles that I use daily. I prefer the clean and minimal type of desktops and have created this thus far.
+Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily. I prefer the clean and minimal type of desktops and have created this thus far.
 
 <details>
     <summary>Preview</summary>
@@ -20,6 +20,12 @@ Hello! Welcome to my showcase of my Windows dotfiles that I use daily. I prefer 
 </details>
 <br>
 
+<details>
+    <summary>Preview of my desktop in action!</summary>
+    <video src="/assets/my_desktop.mp4" alt="Preview of my desktop in action!" controls/>
+</details>
+<br>
+
 ## Tools
 
 ### Essentials
@@ -30,11 +36,11 @@ Hello! Welcome to my showcase of my Windows dotfiles that I use daily. I prefer 
 - [SetWallpaper](https://github.com/tarannagra/SetWallpaper)
 - [VSCode](https://code.visualstudio.com/)
 - [WezTerm](https://github.com/wez/wezterm)
-  
+
 ### Ease of use
 
-// Make this :)
 
-## End
+
+# End
 
 If you have found this useful or have taken anything here, I would appreciate a star on here ⭐
