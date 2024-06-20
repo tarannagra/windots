@@ -22,7 +22,7 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 
 <details>
     <summary>Preview of my desktop in action!</summary>
-    <video src="/assets/my_desktop.mp4" alt="Preview of my desktop in action!" controls/>
+    <video src="https://github.com/tarannagra/windots/assets/125768336/07aacd84-0467-42c3-aa9d-1c0c87a70e1d" alt="Preview of my desktop in action!" controls/>
 </details>
 <br>
 
