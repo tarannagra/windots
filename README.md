@@ -26,7 +26,7 @@ Hello! Welcome to my showcase of my Windows dotfiles that I use daily. I prefer 
 
 - [glazewm](https://github.com/glzr-io/glazewm)
 - [NerdFont](https://www.nerdfonts.com/)
-- [Oh-My-Posh]()
+- [Oh-My-Posh](https://ohmyposh.dev/)
 - [SetWallpaper](https://github.com/tarannagra/SetWallpaper)
 - [VSCode](https://code.visualstudio.com/)
 - [WezTerm](https://github.com/wez/wezterm)
