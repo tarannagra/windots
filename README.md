@@ -30,6 +30,7 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 
 ### Essentials
 
+- [FlowLauncher](https://www.flowlauncher.com/)
 - [glazewm](https://github.com/glzr-io/glazewm)
 - [NerdFont](https://www.nerdfonts.com/)
 - [Oh-My-Posh](https://ohmyposh.dev/)
@@ -37,10 +38,15 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 - [VSCode](https://code.visualstudio.com/)
 - [WezTerm](https://github.com/wez/wezterm)
 
-### Ease of use
+### Terminal Tools
 
+- [lsd](https://github.com/lsd-rs/lsd)
+  - [config](./config/.config/lsd/config.yaml)
+- [winfetch](https://github.com/lptstr/winfetch)
+  - [config](./config/.config/winfetch/config.ps1)
+- [bat](https://github.com/sharkdp/bat)
+- 
 
-
-# End
+# Ending notes
 
 If you have found this useful or have taken anything here, I would appreciate a star on here ⭐
