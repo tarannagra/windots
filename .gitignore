@@ -1,5 +1,6 @@
 .vscode/
-copy_from/
+copy_from.py
+*.log
 
 # removing grabbed files/folders
 grammarly-languageserver

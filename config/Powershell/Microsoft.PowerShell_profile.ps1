@@ -1,5 +1,5 @@
 <#
-    PowerShell config rewrite -- by Taran Nagra
+    PowerShell config rewrite
         Inspired from:
             - https://github.com/ChrisTitusTech/powershell-profile
 
@@ -53,6 +53,17 @@ Update-PowerShell
 
 ### CL Utils
 
+function search-ddg {
+    $query = "https://duckduckgo.com/?q="
+    $args | % { $query = $query + "$_+" }
+    $url = $query.Substring(0, $query.Length - 1)
+    start $url
+}
+
+function rm-rf($path) {
+    Remove-Item $path -r -Force
+}
+
 function reload {
     & $PROFILE;
 };
@@ -88,6 +99,39 @@ function ll() {
     lsd -l
 }
 
+function screensaver() {
+    # no args -> random
+    gh screensaver
+}
+
+function pipes() {
+    gh screensaver -s pipes
+}
+
+### Python easy stuff
+
+function create-venv($venv_name) {
+    uv venv
+}
+
+#### `pip` replacement -> uv
+
+function pipi($package) {
+    uv pip install $package
+}
+
+function pipl() {
+    uv pip list
+}
+
+function pipr() {
+    uv pip install -r requirements.txt
+}
+
+function pipf() {
+    uv pip freeze
+}
+
 ### Git time :)
 #### Most of the time I'm too lazy to write them
 
@@ -111,7 +155,7 @@ function gpom {
 
 function .. {
     # surprised this is a valid function name
-    # but man it's good and useful
+    # but man it's good and useful as fuck
     Set-Location ..;
 }
 
@@ -123,17 +167,44 @@ function pwdc {
     Get-Location | grep "C:\\" | clip
 }
 
+## Filebot renamed Functions
+
+function rename-mkv($db_mode) {
+    if ($db_mode -eq 'tv') {
+        $option = "TheMovieDB::TV"
+    } else {
+        $option = "TheMovieDB"
+    }
+    
+    filebot -rename *.mkv --db $option -non-strict 
+}
+
+function rename-mp4($db_mode) {
+    if ($db_mode -eq 'tv') {
+        $option = "TheMovieDB::TV"
+    } else {
+        $option = "TheMovieDB"
+    }
+    
+    filebot -rename *.mp4 --db $option -non-strict 
+}
+
 ## Aliases
 Set-Alias -Name cat -Value bat
 Set-Alias -Name ls -Value lsd
+Set-Alias -Name ddg -Value search-ddg
 
+# Filebot simple rename
+# MKV
+Set-Alias -Name mkvr -Value rename-mkv
+Set-Alias -Name mp4r -Value rename-mp4
 
 ## import and set the name to the respective script in:
 ### ../Scripts/*.ps1
 Set-Alias -Name wp -Value 'C:\Users\Taran\Documents\Powershell\Scripts\SetWallpaper.exe'
-# Set-Alias -Name lvim -Value 'C:\Users\Taran\.local\bin\lvim.ps1'
+Set-Alias -Name lvim -Value 'C:\Users\Taran\.local\bin\lvim.ps1'
 
-$omp_config = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/zash.omp.json"
+$omp_config = "C:\Users\Taran\Documents\Powershell\OMP\zash.omp.json"
 
 oh-my-posh init pwsh --config $omp_config | Invoke-Expression
 # set a window title so that it at least looks more appealing
