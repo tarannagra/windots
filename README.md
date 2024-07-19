@@ -43,6 +43,10 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 
 ## Minimal Version (with icons)
 
+> [!WARNING]
+> I am aware of the issue with icons not being rendered for this version. An update will be made once I return from my holiday.
+> Expected fix on 25th July!
+
 <details>
     <summary>Showcasing my desktop</summary>
     <img src="/assets/version_2/desktop_1.png" alt="Preview of my desktop with no open apps">
