@@ -1,5 +1,5 @@
 # Taran's GlazeWM Config :)
-# Updated on 08/07/24
+# Updated on 01/07/24
 
 # colour from:
 # https://github.com/catppuccin/glazewm/blob/main/example-config.yaml
@@ -61,6 +61,12 @@ focus_borders:
     enabled: false
     color: "#ff0000"
 
+# taking some inspiration from some r/unixporn submissions which I think would look awesome on Windows too!
+# Refs:
+#   - 
+#   - 
+#   - 
+
 bar:
   height: "28px"
   position: "top"
@@ -79,7 +85,7 @@ bar:
 
   components_left:
     - type: "text"
-      text: " ¾▒Éï "
+      text: " 󱐋 "
       background: "transparent"
       margin: "1px 1px 1px 1px"
       border_width: "0 0 0 0"
@@ -136,17 +142,17 @@ bar:
     - type: "weather"
       latitude: 52.408054
       longitude: -1.510556
-      label: "{temperature_celsius}┬░C"
-      label_sun: "{temperature_celsius}┬░C ÔÿÇ´©Å "
-      label_moon: "{temperature_celsius}┬░C ­ƒîÖ"
-      label_cloud_moon: "{temperature_celsius}┬░C ­ƒîÖÔÿü´©Å"
-      label_cloud_sun: "{temperature_celsius}┬░C Ôøà"
-      label_cloud_moon_rain: "{temperature_celsius}┬░C ­ƒîÖ­ƒîº´©Å"
-      label_cloud_sun_rain: "{temperature_celsius}┬░C ­ƒîª´©Å"
-      label_cloud_rain: "{temperature_celsius}┬░C ­ƒîº´©Å"
-      label_snow_flake: "{temperature_celsius}┬░C ÔØä´©Å"
-      label_thunderstorm: "{temperature_celsius}┬░C ÔÜí"
-      label_cloud: "{temperature_celsius}┬░C Ôÿü´©Å"
+      label: "{temperature_celsius}°C"
+      label_sun: "{temperature_celsius}°C ☀️ "
+      label_moon: "{temperature_celsius}°C 🌙"
+      label_cloud_moon: "{temperature_celsius}°C 🌙☁️"
+      label_cloud_sun: "{temperature_celsius}°C ⛅"
+      label_cloud_moon_rain: "{temperature_celsius}°C 🌙🌧️"
+      label_cloud_sun_rain: "{temperature_celsius}°C 🌦️"
+      label_cloud_rain: "{temperature_celsius}°C 🌧️"
+      label_snow_flake: "{temperature_celsius}°C ❄️"
+      label_thunderstorm: "{temperature_celsius}°C ⚡"
+      label_cloud: "{temperature_celsius}°C ☁️"
 
     # - type: "image"
     #   source: "C:\\Users\\Taran\\.glaze-wm\\icons\\icons8-windows-64.png"
@@ -161,7 +167,7 @@ bar:
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "­ƒòæ hh:mm tt"
+      time_formatting: "🕑 hh:mm tt"
       margin: "0 4px"
       padding: "0 8px"
       border_width: "2 1 2 1"
@@ -178,9 +184,9 @@ bar:
 
     # insert music here
     - type: "music"
-      label_not_playing: "<attr ff='JetBrainsMono Nerd Font' fg='#CD5C5C'>¾░Øø</attr>"
-      label_paused: "<attr ff='JetBrainsMono Nerd Font' fg='#FCE883'>¯½æ {song_title} - {artist_name}</attr>"
-      label_playing: "<attr ff='JetBrainsMono Nerd Font' fg='#FDF6E4'>¾░Äç {song_title} - {artist_name}</attr>"
+      label_not_playing: "<attr ff='JetBrainsMono Nerd Font' fg='#CD5C5C'>󰝛</attr>"
+      label_paused: "<attr ff='JetBrainsMono Nerd Font' fg='#FCE883'> {song_title} - {artist_name}</attr>"
+      label_playing: "<attr ff='JetBrainsMono Nerd Font' fg='#FDF6E4'>󰎇 {song_title} - {artist_name}</attr>"
       max_title_length: 10
       max_artist_length: 7
       margin: "4 4px"
@@ -191,10 +197,10 @@ bar:
       background: ""
 
     # - type: "volume"
-    #   label_low: "­ƒöë {volume_level}% |"
-    #   label_medium: "­ƒöè {volume_level}% |"
-    #   label_high: "­ƒôó {volume_level}% |"
-    #   label_mute: "­ƒöç {volume_level}% |"
+    #   label_low: "🔉 {volume_level}% |"
+    #   label_medium: "🔊 {volume_level}% |"
+    #   label_high: "📢 {volume_level}% |"
+    #   label_mute: "🔇 {volume_level}% |"
   
     # - type: 'system tray'
     #   label_expand_text: 'E'
@@ -202,12 +208,12 @@ bar:
     #   padding: '8px 0px'
 
     - type: "battery"
-      label_draining: " | {battery_level}% ´çª |"
-      label_charging: " | {battery_level}% ¾░éä |"
+      label_draining: " | {battery_level}%  |"
+      label_charging: " | {battery_level}% 󰂄 |"
 
     - type: "tiling direction"
-      label_horizontal: "Ô«é" # may have to press alt+v to get it to show
-      label_vertical: "Ô«ü"
+      label_horizontal: "⮂" # may have to press alt+v to get it to show
+      label_vertical: "⮁"
       margin: "0 4px"
       padding: "0 8px"
 
@@ -228,7 +234,7 @@ bar:
       border_color: "transparent"
 
     - type: "text"
-      text: " ¾░ÉÑ "
+      text: " 󰐥 "
       background: "transparent"
       margin: "0px -6px 0px -6px"
       border_width: "2 0 2 0"
@@ -240,32 +246,32 @@ bar:
 
 workspaces:
   - name: "1" # home
-    display_name: " ¾░ï£ "
+    display_name: " 󰋜 "
     keep_alive: true
     bind_to_monitor: 1
 
   - name: "2" # web
-    display_name: " ¾░ûƒ "
+    display_name: " 󰖟 "
     keep_alive: true
     bind_to_monitor: 2
 
   - name: "3" # code
-    display_name: " ¾░¿× "
+    display_name: " 󰨞 "
     keep_alive: true
     bind_to_monitor: 1
 
   - name: "4" # game
-    display_name: " ´åÂ "
+    display_name: "  "
     keep_alive: true
     bind_to_monitor: 1
 
   - name: "5" # media
-    display_name: " ¾░┐Ä "
+    display_name: " 󰿎 "
     keep_alive: true
     bind_to_monitor: 2
   
   - name: "6" # social
-    display_name: " ´ç┐ "
+    display_name: "  "
     keep_alive: true
     bind_to_monitor: 2
 
