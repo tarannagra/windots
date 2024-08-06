@@ -6,16 +6,18 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 
 - [Taran's windots](#tarans-windots)
 - [Contents](#contents)
-  - [Original Version](#original-version)
-  - [Minimal Version (with icons)](#minimal-version-with-icons)
-    - [Current Features](#current-features)
-  - [Tools](#tools)
-    - [Essentials](#essentials)
-    - [Terminal Tools](#terminal-tools)
+  - [GlazeWM Version 2](#glazewm-version-2)
+    - [Original Version](#original-version)
+    - [Minimal Version (with icons)](#minimal-version-with-icons)
+      - [Current Features](#current-features)
+  - [GlazeWM Version 3](#glazewm-version-3)
+    - [Current State](#current-state)
+    - [Tools](#tools)
 - [Ending notes](#ending-notes)
 
+## GlazeWM Version 2
 
-## Original Version
+### Original Version
 
 <details>
     <summary>Preview</summary>
@@ -41,7 +43,7 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 </details>
 <br>
 
-## Minimal Version (with icons)
+### Minimal Version (with icons)
 
 > [!IMPORTANT]
 > There was an issue with rendering any of the emoji/icons and a fix has now been made available. Turns out using `cat config.yaml | clip` is a very bad idea.
@@ -54,7 +56,7 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 
 <details>
     <summary>Terminals, Terminals, Terminals!</summary>
-    <img src="/assets/version_2/desktop_2.png" alt="Showcase of terminals on home workspace">
+    <img src="/assets/version_2/desktop_2.png" alt="Showcase of terminals on dev workspace">
 </details>
 <br>
 
@@ -64,7 +66,7 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 </details>
 <br> -->
 
-### Current Features
+#### Current Features
 
 - WM:
   - Subtle transparent glow underneath the bar
@@ -82,10 +84,27 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
   - The GlazeWM current window tiling direction icon
   - Finally, a power-off button
 
+## GlazeWM Version 3
 
-## Tools
+> [!IMPORTANT]
+> This is using [GlazeWM's rewrite](https://github.com/glzr-io/glazewm) and not the previous build in C#.
+> This includes a new bar too, [Zebar](https://github.com/glzr-io/zebar) - removes some functions I liked previously but it is what it is.
 
-### Essentials
+### Current State
+
+<details>
+    <summary>Main desktop (no apps on)</summary>
+    <img src="/assets/rewrite/version_1/workspace_home.png" alt="Showing workspace home">
+</details>
+<br>
+
+<details>
+    <summary>My workflow</summary>
+    <img src="/assets/rewrite/version_1/workspace_dev.png" alt="Showing workspace dev">
+</details>
+<br>
+
+### Tools
 
 - [FlowLauncher](https://www.flowlauncher.com/)
 - [glazewm](https://github.com/glzr-io/glazewm)
@@ -94,14 +113,6 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 - [SetWallpaper](https://github.com/tarannagra/SetWallpaper)
 - [VSCode](https://code.visualstudio.com/)
 - [WezTerm](https://github.com/wez/wezterm)
-
-### Terminal Tools
-
-- [LSD](https://github.com/lsd-rs/lsd)
-  - [config](./config/.config/lsd/config.yaml)
-- [winfetch](https://github.com/lptstr/winfetch)
-  - [config](./config/.config/winfetch/config.ps1)
-- [bat](https://github.com/sharkdp/bat)
 
 # Ending notes
 
