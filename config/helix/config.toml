@@ -1,0 +1,38 @@
+# Taran's Helix Configuration :D
+
+theme = "tokyonight_moon"
+
+[editor]
+line-number = "relative"
+mouse = false
+auto-format = false # i write it the way i want to :)
+bufferline = "multiple"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "version-control", "position"]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+
+[editor.whitespace.characters]
+space = "·"
+tab = "→"
+
+# mapping of keys now
+[keys.normal]
+C-s = ":w" # won't forget but if i do
