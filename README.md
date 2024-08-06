@@ -101,6 +101,7 @@ Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily
 <details>
     <summary>My workflow</summary>
     <img src="/assets/rewrite/version_1/workspace_dev.png" alt="Showing workspace dev">
+    <p>The editor shown here isn't nvim, rather it's <a href="https://github.com/helix-editor/helix/">helix</a>!</p>
 </details>
 <br>
 
