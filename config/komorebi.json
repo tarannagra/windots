@@ -1,0 +1,191 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.28/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 7,
+  "default_container_padding": 7,
+  "transparency": true,
+  "transparency_alpha": 250,
+  "animation": {
+    "enabled": true,
+    "duration": 350,
+    "style": "EaseInOutQuad",
+    "fps": 60
+  },
+  "border": true,
+  "border_width": 3,
+  "border_implementation": "Komorebi",
+  "border_offset": -1,
+  "border_colours": {
+    "single": "#907ae8",
+    "stack": "#00a542",
+    "monocle": "#ff3399",
+    "unfocused": "#2a3035"
+  },
+  "mouse_follows_focus": false,
+  "stackbar": {
+    "mode": "Never"    
+  },
+  "float_rules": [
+    {
+      "kind": "Exe",
+      "id": "explorer.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Arc extension popup",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Files.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "TeraCopy.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "SnippingTool.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Settings",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "Microsoft Store",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Title",
+      "id": "FileBot",
+      "matching_strategy": "Equals"
+    }
+    
+  ],
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "Home",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "Interwebs",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "Code",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Code",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "Game",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "RobloxPlayerBeta",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "destiny2",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "Media",
+          "layout": "VerticalStack"
+        }
+      ]
+    },
+    {
+      "workspaces": [ 
+        {
+          "name": "Interwebs",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Arc",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "Game",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Steam",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Minecraft Launcher",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "EpicGamesLauncher",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Dolphin",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "Social",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Discord",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "LINE",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "Download",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "qbittorrent",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Motrix",
+              "matching_strategy": "Equals"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
