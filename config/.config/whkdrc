@@ -1,0 +1,82 @@
+.shell pwsh
+
+# Taran's whkdrc file :D
+# I like how my workflow was in Glaze. So I will kinda replicate it!
+
+# Reload whkd configuration
+# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+alt + shift + r         : komorebic reload-configuration
+
+# App shortcuts - these require shell to be pwsh / powershell
+# The apps will be focused if open, or launched if not open
+# alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
+# alt + q                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+
+alt + q                 :  start chrome
+
+alt + return             : start wezterm-gui
+
+
+alt + shift + q         : komorebic close
+alt + m                 : komorebic minimize
+alt + x                 : komorebic toggle-maximize
+
+# Focus windows
+alt + left                 : komorebic focus left
+alt + down                 : komorebic focus down
+alt + up                   : komorebic focus up
+alt + right                : komorebic focus right
+alt + shift + oem_4     : komorebic cycle-focus previous # oem_4 is [
+alt + shift + oem_6     : komorebic cycle-focus next # oem_6 is ]
+
+# Move windows
+alt + shift + left         : komorebic move left
+alt + shift + down         : komorebic move down
+alt + shift + up           : komorebic move up
+alt + shift + right        : komorebic move right
+alt + shift + return    : komorebic promote
+
+# Stack windows
+# INFO: Stacking windows means to tab thru your apps as if you could do alt+tab but only for the stacked apps!
+# alt + left              : komorebic stack left
+# alt + down              : komorebic stack down
+# alt + up                : komorebic stack up
+# alt + right             : komorebic stack right
+# alt + oem_1             : komorebic unstack # oem_1 is ;
+# alt + oem_4             : komorebic cycle-stack previous # oem_4 is [
+# alt + oem_6             : komorebic cycle-stack next # oem_6 is ]
+
+# Resize
+alt + oem_plus          : komorebic resize-axis horizontal increase
+alt + oem_minus         : komorebic resize-axis horizontal decrease
+alt + shift + oem_plus  : komorebic resize-axis vertical increase
+alt + shift + oem_minus : komorebic resize-axis vertical decrease
+
+# Manipulate windows
+alt + shift + space     : komorebic toggle-float
+alt + shift + f         : komorebic toggle-monocle # ??? the eye glass?
+
+# Window manager options
+alt + shift + o         : komorebic retile
+alt + p                 : komorebic toggle-pause
+
+# Layouts
+# alt + c                 : komorebic flip-layout horizontal
+# alt + y                 : komorebic flip-layout vertical
+
+# Workspaces
+alt + 1                 : komorebic focus-workspace 0
+alt + 2                 : komorebic focus-workspace 1
+alt + 3                 : komorebic focus-workspace 2
+alt + 4                 : komorebic focus-workspace 3
+alt + 5                 : komorebic focus-workspace 4
+alt + 6                 : komorebic focus-workspace 5
+
+# Move windows across workspaces
+alt + shift + 1         : komorebic move-to-workspace 0
+alt + shift + 2         : komorebic move-to-workspace 1
+alt + shift + 3         : komorebic move-to-workspace 2
+alt + shift + 4         : komorebic move-to-workspace 3
+alt + shift + 5         : komorebic move-to-workspace 4
+alt + shift + 6         : komorebic move-to-workspace 5
