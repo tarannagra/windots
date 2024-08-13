@@ -124,6 +124,11 @@
               "kind": "Exe",
               "id": "Arc",
               "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "vivaldi",
+              "matching_strategy": "Equals"
             }
           ]
         },
@@ -181,6 +186,17 @@
             {
               "kind": "Exe",
               "id": "Motrix",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "Media",
+          "layout": "VerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "JellyfinMediaPlayer",
               "matching_strategy": "Equals"
             }
           ]
