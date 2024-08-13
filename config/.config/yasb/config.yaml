@@ -1,5 +1,5 @@
 # Taran's config for YASB
-# Updated on 10/08/24
+# Updated on 13/08/24
 
 # To check the options supported by any widget 
 ## 1. Open this url - https://github.com/ashwinjadhav818/yasb/tree/main/src/core/validation
@@ -372,7 +372,10 @@ widgets:
         run_cmd: "python %USERPROFILE%/.config/yasb/helpers/media.py"
         run_interval: 1000
         return_format: "json"
-  # TODO: add callbacks for play/pause
+      callbacks:
+        on_left: "do_nothing"
+        on_middle: "toggle_label"
+        on_right: "do_nothing"
   
   warp:
     type: "yasb.custom.CustomWidget"
