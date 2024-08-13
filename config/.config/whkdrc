@@ -1,7 +1,7 @@
 .shell pwsh
 
 # Taran's whkdrc file :D
-# I like how my workflow was in Glaze. So I will kinda replicate it!
+# Updated 13/08/24 :D
 
 # Reload whkd configuration
 # alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
@@ -13,7 +13,7 @@ alt + shift + r         : komorebic reload-configuration
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + q                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
 
-alt + q                 :  start chrome
+alt + q                 :  start vivaldi
 
 alt + return             : start wezterm-gui
 
