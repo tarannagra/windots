@@ -62,7 +62,7 @@ winget install LGUG2Z.whkd
 
 ### ⬇️ Installing the bar
 
-For my desktop, I used [this bar](https:://github.com/ashwinjadhav818/yasb/) and gave it some modifications. I prefer a clean and minimal bar that displays all I need to know daily. 
+For my desktop, I used [this bar](https://github.com/ashwinjadhav818/yasb/) and gave it some modifications. I prefer a clean and minimal bar that displays all I need to know daily. 
 
 There's not too much of a difference but for some of the widgets there are differences and I have added 2x custom ones. On the README within the repository, there are install instructions and a note to add it to start-up... which is recommended!
 
