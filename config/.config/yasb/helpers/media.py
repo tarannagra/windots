@@ -1,9 +1,3 @@
-""" 
-Taran's Media Custom Widget
-
-This is intended for usage with YASB.
-"""
-
 import json
 import asyncio
 from typing import Union
@@ -31,6 +25,14 @@ async def main() -> None:
         return
     artist = out[0]
     title = out[1]
+    
+    # trinucate the artist and title
+    # append ... to the end if it's larger than
+    # 12 for artist and 15 for title
+    if len(artist) > 12:
+        artist = artist[:12] + "..."
+    if len(title) > 15:
+        title = title[:15] + "..."
     formatt["artist"] = artist
     formatt["title"] = title
     formatt["full"] = f"{artist} - {title}"
