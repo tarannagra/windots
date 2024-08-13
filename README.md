@@ -1,6 +1,6 @@
 # Taran's windots
 
-Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily. I prefer the clean and minimal type of desktops and have created this thus far.
+Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. And before you tell me to use Linux instead of Windows, I did. I like it more but this machine (that has these dots on) is the daily driver!
 
 # Contents
 
