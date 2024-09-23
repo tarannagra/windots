@@ -1,30 +1,73 @@
 # Taran's Zebar Config :)
+# Updated: 05/09/2024
+
+# Changelog: 
+# - has cool animations when you move to a workspace or press the workspace button
 
 # Yaml is white-space sensitive (use 2 spaces to indent).
 
+global:
+  enable_devtools: true
+
 window/bar:
   providers: ['self']
+ 
   # Width of the window in physical pixels.
   width: '{{ self.args.MONITOR_WIDTH }}'
+ 
   # Height of the window in physical pixels.
-  height: '44'
+  height: '53'
+ 
   # X-position of the window in physical pixels.
   position_x: '{{ self.args.MONITOR_X }}'
+ 
   # Y-position of the window in physical pixels.
   position_y: '{{ self.args.MONITOR_Y }}'
+ 
   # Whether to show the window above/below all others.
   # Allowed values: 'always_on_top', 'always_on_bottom', 'normal'.
   z_order: 'normal'
+ 
   # Whether the window should be shown in the taskbar.
   shown_in_taskbar: false
+ 
   # Whether the window should have resize handles.
   resizable: false
+ 
   # Styles to apply globally within the window. For example, we can use
   # this to import the Nerdfonts icon font. Ref https://www.nerdfonts.com/cheat-sheet
   # for a cheatsheet of available Nerdfonts icons.
   global_styles: |
     @import "https://www.nerdfonts.com/assets/css/webfont.css";
     @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css";
+    @import "https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css";
+    @import "http://asset.localhost/C%3A%2FUsers%2FTaran%2F.glzr%2Fzebar%2Fstyles%2Fglobal.css";
+
+    @keyframes gelatine {
+      from, to { transform: scale(1, 1); }
+      25% { transform: scale(0.9, 1.1); }
+      50% { transform: scale(1.1, 0.9); }
+      75% { transform: scale(0.95, 1.05); }
+    }
+
+    @keyframes grow {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+
+    @keyframes bounce-in-right {
+      0% {
+        opacity: 0;
+        transform: translateX(2000px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+      80% { transform: translateX(10px); }
+      100% { transform: translateX(0); }
+    }
+ 
   # CSS styles to apply to the root element within the window. Using CSS
   # nesting, we can also target nested elements (e.g. below we set the
   # color and margin-right of icons).
@@ -33,16 +76,16 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: rgb(255 255 255 / 80%);
+    color: rgb(255 255 255 / 80%); /* font colour */
     font-family: "JetBrainsMono Nerd Font", ui-monospace, monospace;
     font-size: 13px;
-    font-weight: 600;
-    padding: 4px 24px;
-    border-bottom: 1px solid rgb(255 255 255 / 5%);;
-    background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));
+    padding: 5px 8px;
+    border-bottom: 1px solid rgb(255 255 255 / 5%);
+    /* black->purple */
+    background: linear-gradient(rgb(0 0 0 / 85%), rgb(5 2 20 / 80%));
 
     i {
-      color: rgb(115 130 175 / 95%);
+      /* color: rgb(115 130 175 / 95%); -> unsure what this is or does*/
       margin-right: 7px;
     }
 
@@ -54,20 +97,7 @@ window/bar:
     styles: |
       display: flex;
       align-items: center;
-
-    template/logo:
-      # fa->fontawesome
-      styles: |
-        margin-right: 20px;
-      template: |
-        <i class="fa-solid fa-terminal"></i>
     
-    # template/separator:
-    #   styles: |
-    #   template: |
-    #     <i class="nf nf-oct-dot_fill">
-
-
     template/glazewm_workspaces:
       styles: |
         display: flex;
@@ -76,20 +106,31 @@ window/bar:
         .workspace {
           background: rgb(255 255 255 / 10%);
           margin-right: 4px;
-          padding: 4px 8px;
+          padding: 5px 10px;
           color: rgb(255 255 255 / 90%);
-          border: none;
-          border-radius: 5px;
+          border-radius: 15px;
           cursor: pointer;
 
           &.displayed {
             background: rgb(255 255 255 / 15%);
           }
 
-          &.focused,
-          &:hover {
+          &.focused {
+            color: white;
+            animation: grow 0.7s ease;
             background: rgb(75 115 255 / 50%);
+            border: 2px solid rgba(50, 50, 140, 0.9);
           }
+          &:hover {
+            color: white;
+            background: rgb(75 115 255 / 50%);
+            border: 2px solid rgba(50, 50, 140, 0.9);
+          }
+        }
+
+        .workspace:not(:nth-child(7)) {
+          /* TODO: SPACING BETWEEN WORKSPACE BUTTONS :D */
+          margin-right: 7px;
         }
       providers: ['glazewm']
       events:
@@ -109,50 +150,81 @@ window/bar:
   group/center:
     styles: |
       justify-self: center;
+      color: white;
+      font-size: 15px;
 
     template/clock:
       providers: ['date']
       # Available date tokens: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
       template: |
+        <i class="fa-solid fa-calendar"></i> 
+        {{ date.toFormat(date.now, 'EEE dd/MM') }}
+        &nbsp;
         <i class="fa-solid fa-clock"></i> 
-        {{ date.toFormat(date.now, 't') }}
-
+        {{ date.toFormat(date.now, 'hh:mm a') }}
+        &nbsp;
+  
   group/right:
     styles: |
-      justify-self: end;
       display: flex;
+      justify-content: end;
+      align-items: center;
 
       .template {
-        margin-left: 20px;
+        background: rgb(255 255 255 / 10%);
+        margin: 0px 8px;
+        padding: 2px 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
       }
 
     template/glazewm_other:
-      providers: ['glazewm']
+      providers: ["glazewm"]
       styles: |
-        .binding-mode,
-        .tiling-direction {
-          background: rgb(255 255 255 / 15%);
-          color: rgb(255 255 255 / 90%);
-          border-radius: 3px;
-          padding: 4px 6px;
-          margin: 0;
+        display: flex;
+
+        .binding-mode, .tiling-direction {
+          color: white;
+        }
+
+        .binding-mode {
+          margin-right: 15px;
         }
 
       template: |
         @for (bindingMode of glazewm.bindingModes) {
-          <span class="binding-mode">
+          <div class="binding-mode">
             {{ bindingMode.displayName ?? bindingMode.name }}
-          </span>
+          </div>
         }
 
         @if (glazewm.tilingDirection === 'horizontal') {
-          <i class="tiling-direction nf nf-md-swap_horizontal"></i>
+          <div class="tiling-direction nf nf-md-swap_horizontal"></div>
         } @else {
-          <i class="tiling-direction nf nf-md-swap_vertical"></i>
+          <div class="tiling-direction nf nf-md-swap_vertical"></div>
         }
 
     template/network:
-      providers: ['network']
+      providers: ["network"]
+      styles: |
+        color: white;
+        padding: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        .template {
+          background: rgb(255 255 255 / 10%);
+          margin: 0px 8px;
+          padding: 2px 6px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 30px;
+          }
+
       template: |
         <!-- Show icon based on signal strength. -->
         @if (network.defaultInterface?.type === 'ethernet') {
@@ -163,25 +235,38 @@ window/bar:
           @else if (network.defaultGateway?.signalStrength >= 40) {<i class="nf nf-md-wifi_strength_2"></i>}
           @else if (network.defaultGateway?.signalStrength >= 25) {<i class="nf nf-md-wifi_strength_1"></i>}
           @else {<i class="nf nf-md-wifi_strength_outline"></i>}
-          {{ network.defaultGateway?.ssid }}
+          Wifi
         } @else {
           <i class="nf nf-md-wifi_strength_off_outline"></i>
         }
 
     template/memory:
-      providers: ['memory']
+      providers: ["memory"]
+
+      styles: |
+        div {
+          display: flex;
+          align-items: center;
+          color: white;
+          
+        }
+
       template: |
-        <i class="nf nf-fae-chip"></i>
-        {{ Math.round(memory.usage) }}%
+        <div><i class="nf nf-fae-chip"></i> {{ Math.round(memory.usage) }}%</div>
 
     template/cpu:
       providers: ['cpu']
       styles: |
+        div {
+          display: flex;
+          align-items: center;
+          color: white;
+        }
         .high-usage {
           color: #900029;
         }
       template: |
-        <i class="nf nf-oct-cpu"></i>
+        </div><i class="nf nf-oct-cpu"></i></div>
 
         <!-- Change the text color if the CPU usage is high. -->
         @if (cpu.usage > 85) {
@@ -232,7 +317,3 @@ window/bar:
           @case ('thunder_night') {<i class="nf nf-weather-night_alt_lightning"></i>}
         }
         {{ weather.celsiusTemp }}°
-
-    # template/music:
-    #   template: |
-    #     asd
