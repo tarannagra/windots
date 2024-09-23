@@ -1,4 +1,10 @@
 #* Taran's GlazeWM V3 config :) *#
+# Updated: 21/09/2024
+
+# Changelog:
+# - Better naming to the workspaces 
+# - Handling more apps to work be tiled/floated
+
 
 general:
   # Commands to run when the WM has started (e.g. to run a script or launch
@@ -23,15 +29,15 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: '10px'
+  inner_gap: '5px'
 
   # Gap between windows and the screen edge.
   # TODO: Change this to a suitable gap when the bar has been (re)created.
   outer_gap:
     top: '60px'
-    right: '20px'
-    bottom: '20px'
-    left: '20px'
+    right: '5px'
+    bottom: '5px'
+    left: '5px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -40,13 +46,13 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: '#8dbcff'
+      color: '#7DF9FF'
 
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
-      enabled: false
-      color: '#a1a1a1'
+      enabled: true
+      color: '#2a3035'
 
 window_behavior:
   # New windows are created in this state whenever possible.
@@ -80,35 +86,40 @@ workspaces:
     # n is your left most screen's right screen + 1
   
   - name: '1'
-    display_name: 'Home'
+    display_name: ' Home'
     keep_alive: true
     bind_to_monitor: 0
   
   - name: '2'
-    display_name: "Interwebs"
+    display_name: "󰖟 Interwebs"
     bind_to_monitor: 1
-    keep_alive: true
+    keep_alive: false
       
   - name: '3'
-    display_name: "Dev"
-    keep_alive: true
+    display_name: "󰅩 Code"
+    keep_alive: false
     bind_to_monitor: 0
   
   - name: '4'
-    display_name: "Gaming"
-    keep_alive: true
+    display_name: " Gaming"
+    keep_alive: false
     bind_to_monitor: 1 
     # change it up and move all game launchers
     # to the 2nd monitor for a better list (preference ofc)
   
   - name: '5'
-    display_name: "Media"
-    keep_alive: true
+    display_name: "󰿎 Media"
+    keep_alive: false
     bind_to_monitor: 1
   
   - name: '6'
-    display_name: "Social"
-    keep_alive: true
+    display_name: "󰙯 Social"
+    keep_alive: false
+    bind_to_monitor: 1
+  
+  - name: '7'
+    display_name: "󰉍 Download"
+    keep_alive: false
     bind_to_monitor: 1
   
 window_rules:
@@ -140,22 +151,26 @@ window_rules:
       - window_process: { equals: '/Taskmgr|ScreenClippingHost/' }
       
       - window_process: { equals: "BakkesMod" } # while True: print("What a save!"*3, end="\n\n"); sleep(3)
+      # - window_process: { equals: "MusicBee" }
+
     
   #* Move games to workspace 1 *#
   - commands: ['move --workspace 1']
     match:
       - window_process: { equals: "RobloxPlayerBeta" }
       - window_process: { equals: "destiny2" }
+      - window_process: { equals: "TetrisEffect" }
 
   - commands: ['move --workspace 2']
     match:
       - window_process: { equals: "chrome" }
-      - window_process: { equals: "Arc" }
+      - window_process: { equals: "zen" }
 
   - commands: ['move --workspace 3']
     match:
       - window_process: { equals: "Code" }
       - window_process: { equals: "sublime_text" }
+      - window_process: { equals: "Obsidian" }
   
   - commands: ['move --workspace 4']
     match:
@@ -166,25 +181,33 @@ window_rules:
   
   - commands: ['move --workspace 5']
     match:
-      - window_process: { equals: "qbittorrent" }
       - window_process: { equals: "vlc" }
       - window_process: { equals: "Photos" }
       - window_process: { equals: "stremio" }
       - window_title: { equals: "Films & TV" }
-    
+      - window_process: { equals: "MusicBee" }
+          
   - commands: ['move --workspace 6']
     match:
       - window_process: { equals: "Discord" }
       - window_process: { equals: "LINE" }
+      - window_process: { equals: "Beeper" }
+  
+  - commands: ['move --workspace 7']
+    match:
+      - window_process: { equals: "qbittorrent" }
+      - window_process: { equals: "Motrix" }
 
   - commands: ['set-floating']
     match:
-      - window_process: { equals: "wezterm-gui" }
+      - window_process: { equals: "MusicBee" }
+      - window_process: { equals: "OneCommander" }
       - window_process: { equals: "explorer" }
       - window_process: { equals: "SnippingTool" }
       - window_process: { equals: "TeraCopy" }
-      - window_process: { equals: "Zen" }
       - window_title: { equals: 'FileBot' }
+      - window_process: { equals: "ShareX" }
+      - window_process: { equals: "Taskmgr" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -255,9 +278,9 @@ keybindings:
   - commands: ['toggle-tiling-direction']
     bindings: ['alt+v']
 
-  # Change focus from tiling windows -> floating -> fullscreen.
-  - commands: ['wm-cycle-focus']
-    bindings: ['alt+space']
+  # # Change focus from tiling windows -> floating -> fullscreen.
+  # - commands: ['wm-cycle-focus']
+  #   bindings: ['alt+space']
 
   # Change the focused window to be floating.
   - commands: ['toggle-floating --centered']
@@ -281,7 +304,7 @@ keybindings:
 
   # Kill GlazeWM process safely.
   - commands: ['wm-exit']
-    bindings: ['alt+shift+e']
+    bindings: ['alt+shift+m']
 
   # Re-evaluate configuration file.
   - commands: ['wm-reload-config']
@@ -289,7 +312,7 @@ keybindings:
 
   # Redraw all windows.
   - commands: ['wm-redraw']
-    bindings: ['alt+shift+w']
+    bindings: ['alt+shift+m']
 
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
@@ -297,7 +320,7 @@ keybindings:
   - commands: ['shell-exec %ProgramFiles%/WezTerm/wezterm-gui.exe']
     bindings: ['alt+enter']
 
-  - commands: ['shell-exec %ProgramFiles%/Google/Chrome/Application/chrome.exe']
+  - commands: ['shell-exec %LOCALAPPDATA%/Vivaldi/Application/vivaldi.exe']
     bindings: ['alt+q']
   
   - commands: ['shell-exec %LOCALAPPDATA%/FlowLauncher/Flow.Launcher.exe']
@@ -330,6 +353,8 @@ keybindings:
     bindings: ['alt+5']
   - commands: ['focus --workspace 6']
     bindings: ['alt+6']
+  - commands: ['focus --workspace 7']
+    bindings: ['alt+7']
   
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -355,3 +380,5 @@ keybindings:
     bindings: ['alt+shift+5']
   - commands: ['move --workspace 6', 'focus --workspace 6']
     bindings: ['alt+shift+6']
+  - commands: ['move --workspace 7', 'focus --workspace 7']
+    bindings: ['alt+shift+7']
