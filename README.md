@@ -2,6 +2,10 @@
 
 Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily. I prefer the clean and minimal type of desktops and have created this thus far.
 
+# Important
+
+I have another branch with content related to Komorebi instead of GlazeWM. You can find it by changing brances, or by [pressing me](https://github.com/tarannagra/windots/tree/komorebi)!
+
 # Contents
 
 - [Taran's windots](#tarans-windots)
