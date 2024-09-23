@@ -1,0 +1,15 @@
+# Taran's Starship Configuration
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+# format = "$python[➜](bold green) $directory($git_branch)"
+
+[directory]
+truncation_length = 1
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
