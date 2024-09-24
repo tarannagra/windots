@@ -13,6 +13,7 @@ I have another branch with content related to Komorebi instead of GlazeWM. You c
 - [Contents](#contents)
   - [🪟 GlazeWM V3](#-glazewm-v3)
     - [📸 Showcase](#-showcase)
+    - [🧰 Tools I Use](#-tools-i-use)
 - [Ending notes](#ending-notes)
 
 ## 🪟 GlazeWM V3
@@ -28,6 +29,10 @@ Long awaited update of my current GlazeWM configuration.
 ![Workspace "Code" showing VSC w/ WezTerm on the right](./assets/version_1/code_workspace.png)
 
 ![Showing WezTerm on my background](./assets/version_1/terminals.png)
+
+### 🧰 Tools I Use
+
+TODO.
 
 
 # Ending notes
