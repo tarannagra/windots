@@ -21,62 +21,39 @@ Remove-Alias pwd;
 ## Module config
 ### PSReadLine
 
-Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -EditMode Windows
-Set-PSReadLineOption -Colors @{ InlinePrediction = '#9CA3AF'} # grey
+Set-PSReadLineOption -PredictionSource History `
+    # -PredictionViewStyle ListView `
+    # -HistoryNoDuplicates `
+    # -EditMode Windows `
+    # -Colors @{ InlinePrediction = "#9CA3AF" }
 
-# Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-# Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+# Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 
 ## Functions
 
-function Update-PowerShell {
-    # Refactor of CTT_L... kinda
-    Write-Host "Checking for updates.." -ForegroundColor Green;
-    $current_version = $PSVersionTable.PSVersion.ToString();
-    $url = "https://api.github.com/repos/PowerShell/PowerShell/releases/latest";
-    $release_info = Invoke-RestMethod -Uri $url;
-    $release_version = $release_info.tag_name.Trim('v');
-    if ($current_version -lt $release_version) {
-        Write-Host "PowerShell requires an update. Updating..." -ForegroundColor Yellow;
-        winget upgrade "Microsoft.PowerShell" --accept-source-agreements --accept-package-agreements;
-        Write-Host "PowerShell updated! Restart your shell to confirm changes.";
-    } else {
-        Write-Host "PowerShell is up to date :)" -ForegroundColor Green;
-    };
-};
-Update-PowerShell
+# function Update-PowerShell {
+#     # Refactor of CTT_L... kinda
+#     Write-Host "Checking for updates.." -ForegroundColor Green;
+#     $current_version = $PSVersionTable.PSVersion.ToString();
+#     $url = "https://api.github.com/repos/PowerShell/PowerShell/releases/latest";
+#     $release_info = Invoke-RestMethod -Uri $url;
+#     $release_version = $release_info.tag_name.Trim('v');
+#     if ($current_version -lt $release_version) {
+#         Write-Host "PowerShell requires an update. Updating..." -ForegroundColor Yellow;
+#         winget upgrade "Microsoft.PowerShell" --accept-source-agreements --accept-package-agreements;
+#         Write-Host "PowerShell updated! Restart your shell to confirm changes.";
+#     } else {
+#         Write-Host "PowerShell is up to date :)" -ForegroundColor Green;
+#     };
+# };
+# Update-PowerShell
 
 ### CL Utils
-
-function search-ddg {
-    $query = "https://duckduckgo.com/?q="
-    $args | % { $query = $query + "$_+" }
-    $url = $query.Substring(0, $query.Length - 1)
-    start $url
-}
 
 function rm-rf($path) {
     Remove-Item $path -r -Force
 }
-
-function reload {
-    & $PROFILE;
-};
-
-function ff($filename) {
-    # Rip from CTT_L
-    # TODO:
-    # - make it faster
-    Write-Host "Searching for all instances of ${filename}..." -ForegroundColor Yellow
-    Get-ChildItem -Recurse -Filter "*${filename}*" -ErrorAction SilentlyContinue | ForEach-Object {
-        Write-Output "$($_.Directory)\$($_)"
-    }
-};
 
 function pkill($process_name) {
     Get-Process $process_name -ErrorAction SilentlyContinue | Stop-Process
@@ -95,20 +72,12 @@ function ls($optional) {
     }
 }
 
-function ll() {
-    lsd -l
-}
-
-function screensaver() {
-    # no args -> random
-    gh screensaver
-}
-
-function pipes() {
-    gh screensaver -s pipes
-}
-
 ### Python easy stuff
+
+# function activate() {
+#     $dir = Get-Location | grep "C:\\"
+#     $dir + ".\\.venv\\Scripts\\activate"
+# }
 
 function create-venv($venv_name) {
     uv venv
@@ -192,20 +161,20 @@ function rename-mp4($db_mode) {
 ## Aliases
 Set-Alias -Name cat -Value bat
 Set-Alias -Name ls -Value lsd
-Set-Alias -Name ddg -Value search-ddg
 
 # Filebot simple rename
 # MKV
 Set-Alias -Name mkvr -Value rename-mkv
 Set-Alias -Name mp4r -Value rename-mp4
 
-## import and set the name to the respective script in:
-### ../Scripts/*.ps1
-Set-Alias -Name wp -Value 'C:\Users\Taran\Documents\Powershell\Scripts\SetWallpaper.exe'
-Set-Alias -Name lvim -Value 'C:\Users\Taran\.local\bin\lvim.ps1'
 
-$omp_config = "C:\Users\Taran\Documents\Powershell\OMP\zash.omp.json"
+# omp is slow, it's really slow. so changing to using starship instead
+# $omp_config = "C:\Users\Taran\Documents\Powershell\OMP\zash.omp.json"
 
-oh-my-posh init pwsh --config $omp_config | Invoke-Expression
+# oh-my-posh init pwsh --config $omp_config | Invoke-Expression
 # set a window title so that it at least looks more appealing
+
+Invoke-Expression (&starship init powershell)
+
+
 $Host.UI.RawUI.WindowTitle = "Terminal";
