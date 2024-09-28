@@ -30,6 +30,8 @@ Long awaited update of my current GlazeWM configuration.
 
 ![Showing WezTerm on my background](./assets/version_1/terminals.png)
 
+![A true workspace environment I use](./assets/version_1/true_workspace.png)
+
 ### 🧰 Tools I Use
 
 TODO.
