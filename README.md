@@ -1,6 +1,6 @@
 # Taran's windots
 
-Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. And before you tell me to use Linux instead of Windows, I did. I like it more but this machine (that has these dots on) is the daily driver!
+Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. I like Linux but University requires Windows, so here I am.
 
 # Contents
 
@@ -10,65 +10,139 @@ Hello! Welcome to the `komorebi` branch of my Windows config that's being used d
     - [📸 Showcase](#-showcase)
       - [🖥️ Desktop](#️-desktop)
       - [👨‍💻 Workflow](#-workflow)
-    - [✨ Features](#-features)
-    - [⬇️ Installing Komorebi](#️-installing-komorebi)
-    - [⬇️ Installing the bar](#️-installing-the-bar)
+    - [✨ Programs](#-programs)
+      - [ButteryTaskbar2](#butterytaskbar2)
+      - [Discord (Running Vencord)](#discord-running-vencord)
+        - [Online Themes](#online-themes)
+        - [Plugins](#plugins)
+      - [Komorebi](#komorebi)
+      - [MusicBee](#musicbee)
+        - [Theme](#theme)
+      - [Visual Studio Code](#visual-studio-code)
+        - [Theme](#theme-1)
+      - [Windows Terminal](#windows-terminal)
+        - [Settings](#settings)
+      - [YASB Reborn](#yasb-reborn)
+      - [Zen Browser](#zen-browser)
+        - [Mods](#mods)
 - [⭐ Ending notes](#-ending-notes)
 
 ## 🪟 Komorebi
 
-I plan to test out using this other window manager and an entirely new status bar rather than relying on using Glaze - not bad-mouthing Glaze, but it's good to scour the internet and find another cool piece of software :D.
+I like Komorebi, it's different and it's got cool animations.
 
 ### 📸 Showcase
 
 #### 🖥️ Desktop
 
-![My desktop shows a clear workspace and a top bar.](./assets/komorebi/version_1/desktop_1.png)
+![Default desktop](./assets/desktop.png)
 
 #### 👨‍💻 Workflow
 
-![A true workflow](./assets/komorebi/version_1/true_workflow.png)
+![A true workflow](./assets/workflow.png)
 
-### ✨ Features
+### ✨ Programs
 
-- A clean bar, courtesy of this [fork](https://github.com/ashwinjadhav818/yasb/) of the Yasb bar (with some small mods of my own)
-- Komorebi workspaces and animations :D
-- A nice WezTerm config that also removes the title bar
-- [Flow Launcher](https://flowlauncher.com) with a nice glass acrylic effect on it
-- On the bar specifically, it can do the following:
-  - Detect the current Komorebi workspace
-  - Change the tiling direction 
-  - On the left click, you can search using Flow Launcher & on the right it changes wallpaper using a program I re-wrote in Rust for more speed.
-  - A working media displayer which, when pressed shows off the artist. Only shows the title without any clicks.
-    - [ ] TODO: add callbacks for play/pause on left/right clicks.
-  - A clock in the middle and a left-click shows the date in DD:MM:YY format.
-  - Displays the weather and left-clicking displays more information if needed.
-  - CPU & RAM in their respective slots with CPU showing the core count on the left while RAM shows the available RAM free.
-  - Volume meter to display the current volume and left-clicking toggles the volume to a muted state.
-  - Wi-Fi symbol to determine Wi-Fi status.
-    - [ ] TODO: Add ethernet with Wi-Fi in the same provider.
-  - Custom widget to toggle Cloudflare Warp. You can remove this.
-  - Battery widget with a left-click that displays the ETA left.
-  - Finally, a custom power menu (not made by me, but it's awesome).
+- [ButteryTaskbar2](https://github.com/LuisThiamNye/ButteryTaskbar2)
+- [Discord (Running Vencord)](https://github.com/Vendicated/Vencord)
+- [Komorebi](https://github.com/LGUG2Z/komorebi)
+- [MusicBee](https://getmusicbee.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Windows Terminal](https://github.com/microsoft/terminal)
+- [YASB Reborn](https://github.com/amnweb/yasb)
+- [Zen Browser](https://github.com/zen-browser/desktop)
 
-### ⬇️ Installing Komorebi
+#### ButteryTaskbar2
 
-Using WinGet:
+Settings are defaulted. Ensure that it's ran on startup.
 
-```cmd
-winget install LGUG2Z.komorebi
-winget install LGUG2Z.whkd
+#### Discord (Running Vencord)
+
+![Discord preview with theme](./assets/discord.png)
+
+##### Online Themes
+
+```
+https://discord-extensions.github.io/modern-indicators/src/source.css
+https://raw.githubusercontent.com/SL4F/vencord/main/themes/SettingsModal/SettingsModal.theme.css
+https://refact0r.github.io/system24/theme/system24.theme.css
+https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css
 ```
 
-### ⬇️ Installing the bar
+##### Plugins
 
-For my desktop, I used [this bar](https://github.com/ashwinjadhav818/yasb/) and gave it some modifications. I prefer a clean and minimal bar that displays all I need to know daily. 
+Only showing plugins that're *not* built-in:
 
-There's not too much of a difference but for some of the widgets there are differences and I have added 2x custom ones. On the README within the repository, there are install instructions and a note to add it to start-up... which is recommended!
+- [SoundBoardLogger](https://github.com/ImpishMoxxie/SoundBoardLogger)
+- [vc-message-logger-enhanced](https://github.com/Syncxv/vc-message-logger-enhanced)
+- [vencord-base64-decoder](https://github.com/ThePirateStoner/vencord-base64-decoder)
+
+#### Komorebi
 
 > [!IMPORTANT]
-> When the bar has been installed. In your taskbar, there will be a Y logo for the Yasb bar. Right click it and make sure you enable "Enable Autostart", then you won't have to create a startup script yourself and do all that mumbo jumbo stuff.
+> I have set `KOMOREBI_CONFIG_HOME` to `~/.config/komorebi`.
+> Find [this link](https://lgug2z.github.io/komorebi/common-workflows/komorebi-config-home.html) to be helpful.
 
+Find the remaining configuration [here](./config/.config/komorebi/komorebi.json).
+
+#### MusicBee
+
+![MusicBee preview](./assets/musicbee.png)
+
+##### Theme
+
+- [Aura Dark 3.0](https://www.getmusicbee.com/addons/skins/498/aura-dark/)
+
+#### Visual Studio Code
+
+![Visual Studio Code preview](./assets/vsc.png)
+
+##### Theme
+
+- Tokyo Night
+
+#### Windows Terminal
+
+![Windows Terminal w/ splitting](./assets/terminals.png)
+
+I have modified this to be able to replicate my [wezterm config](./config/.wezterm.lua).
+
+##### Settings
+
+- [PowerShell](https://github.com/PowerShell/PowerShell) & Modules:
+  - Terminal-Icons
+  - z
+- [Starship](https://starship.rs/)
+
+#### YASB Reborn
+
+This is the bar along the top of each image where visible.
+
+Install the bar at [this link](https://github.com/amnweb/yasb), enable startup & copy the `config.yaml` & `styles.css` into `~/.config/yasb/`.
+
+#### Zen Browser
+
+![Zen Browser w/ mTab](./assets/zen_mtab.png)
+
+##### Mods
+
+To install mods, go to [this link](https://zen-browser.app/mods) & press install on any you find cool.
+
+- Audio TabIcon Plus
+- Better UniExtBtn
+- Better Unloaded Tabs
+- Cleaner Extension Menu
+- Disable Rounded Corners
+- Floating findbar
+- Floating URLbar
+- Minimal sidebar
+- No Sidebar Scrollbar
+- Private Mode Highlighting
+- Smaller Compact Mode
+- Super URL Bar
+- Tokyo Night Moon (this one is the theme)
+- Uniform Workspaces Button
+- Zen Minimal Exit Menu
 
 # ⭐ Ending notes
 

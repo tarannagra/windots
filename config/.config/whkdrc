@@ -1,7 +1,7 @@
 .shell pwsh
 
 # Taran's whkdrc file :D
-# Updated 13/08/24 :D
+# Updated 21/10/24 :D
 
 # Reload whkd configuration
 # alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
@@ -13,9 +13,10 @@ alt + shift + r         : komorebic reload-configuration
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + q                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
 
-alt + q                 :  start vivaldi
+alt + q                 :  start zen
+alt + e : start OneCommander
 
-alt + return             : start wezterm-gui
+alt + return             : start wt
 
 
 alt + shift + q         : komorebic close
@@ -58,7 +59,7 @@ alt + shift + space     : komorebic toggle-float
 alt + shift + f         : komorebic toggle-monocle # ??? the eye glass?
 
 # Window manager options
-alt + shift + o         : komorebic retile
+alt + shift + m         : komorebic retile
 alt + p                 : komorebic toggle-pause
 
 # Layouts

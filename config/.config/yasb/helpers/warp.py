@@ -1,9 +1,3 @@
-""" 
-Taran's Warp Custom Widget
-
-This is intended for usage with YASB.
-"""
-
 import json
 import subprocess
 
@@ -17,10 +11,10 @@ def get_output() -> dict[str, str]:
     curr = ""
     text = ""
     if "Disconnected" in check:
-        curr = "󰅤"
+        curr = ""
         text = "Disconnected"
     elif "Connected" in check:
-        curr = "󱇱"
+        curr = "󰌆"
         text = "Connected"
     elif "Connecting" in check:
         curr = "󰇘"
