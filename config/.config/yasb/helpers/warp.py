@@ -1,7 +1,7 @@
 import json
 import subprocess
 
-def get_output() -> dict[str, str]:
+def get_output() -> list[str]:
     check = subprocess.check_output(
         ["warp-cli", "status"],
         stdin=subprocess.PIPE,

@@ -5,7 +5,7 @@ debug: false
 komorebi:
   start_command: "komorebic start --whkd"
   stop_command: "komorebic stop --whkd"
-  reload_command: "komorebic reload-configuration"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
   
 bars:
   status-bar:
@@ -17,11 +17,11 @@ bars:
       position: "top"
       center: false
     blur_effect:
-      enabled: false # Blur effect will be applied to the bar
+      enabled: true # Blur effect will be applied to the bar
       acrylic: false # Acrylic effect will be applied to the bar
       dark_mode: false # Dark mode will add more shadow to the bar
       round_corners: false # Default radius from OS
-      border_color: System # None, System or HEX color (this option is related to round_corners=true)
+      border_color: None # None, System or HEX color (this option is related to round_corners=true)
     window_flags:
       always_on_top: false
       windows_app_bar: true
@@ -36,13 +36,15 @@ bars:
     widgets:
       left:
         [
+          "home",
           # "win_button",
           # "komorebi_workspaces",
           "clock",
-          "apps",
-          # "komorebi_active_layout",
-          "active_window"
-        ] 
+          # "apps",
+          # "whkd",
+          # "wallpapers",
+          "active_window",
+        ]
       center: [
          "komorebi_workspaces",
          "komorebi_active_layout"
@@ -51,16 +53,59 @@ bars:
       right:
         [
           "media",
+          "wallpapers",
           "wifi",
-          "warp",
+          # "microphone",
+          # "taskbar",
+          # "warp",
+          # "traffic",
           # "cpu",
-          # "memory",
+          # "bluetooth",
           "volume",
           "battery",
           "power_menu"
         ]
         
 widgets:
+  bluetooth:
+    type: "yasb.bluetooth.BluetoothWidget"
+    options:
+      label: "<span>{icon}</span>"
+      label_alt: "{device_name}"
+      icons: 
+        bluetooth_on: "\udb80\udcaf"
+        bluetooth_off: "\udb80\udcb2"
+        bluetooth_connected: "\udb80\udcb1"
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+
+  home:
+    type: "yasb.home.HomeWidget"
+    options:
+      label: "<span>\udb80\udf5c</span>"
+      menu_list:
+      - { title: "Download", path: "~\\Downloads" }
+      - { title: "Documents", path: "~\\Documents" }
+      - { title: "University", path: "~\\Documents\\University\\University-Repo" }
+      system_menu: true
+      power_menu: false
+      blur: false
+      alignment: "left"
+      direction: "down"
+
+  microphone:
+    type: "yasb.microphone.MicrophoneWidget"
+    options:
+      label: '<span>{icon}</span>'
+      label_alt: '<span>{icon}</span> {level}%'
+      icons:
+        normal: "\uf130"
+        muted: "\uf131"
+      callbacks:
+        on_left: 'toggle_mute'
+        on_middle: 'toggle_label'
+        on_right: 'exec cmd.exe /c start ms-settings:sound'
+
   disk:
     type: "yasb.disk.DiskWidget"
     options:
@@ -82,7 +127,7 @@ widgets:
       max_field_size:
         label: 25
         label_alt: 15
-      show_thumbnail: true
+      show_thumbnail: false # true -> thumbnail
       controls_only: false
       controls_left: false
       hide_empty: true # Does not show if no music detected
@@ -103,19 +148,22 @@ widgets:
       label_no_window: ""
       label_icon: true
       label_icon_size: 16
-      max_length: 20
+      max_length: 16
       max_length_ellipsis: "..."
       monitor_exclusive: true
+      callbacks:
+        on_left: "toggle_label"
 
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
       label: "<span>{icon}</span>{percent}%"
-      label_alt: "{icon} {percent}% | time: {time_remaining}"
+      label_alt: "<span>{icon}</span> {percent}% | ETA: {time_remaining}s"
       charging_options:
         icon_format: "{charging_icon}"
       callbacks:
         on_left: "do_nothing"
+        on_right: "do_nothing"
 
   clock:
     type: "yasb.clock.ClockWidget"
@@ -179,7 +227,7 @@ widgets:
         label_zero_index: false
         hide_empty_workspaces: false
         hide_if_offline: false
-        animation: false
+        animation: true
         container_padding:
           top: 0
           left: 8
@@ -229,8 +277,8 @@ widgets:
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
-      label: "<span>\udb86\uddb3</span>{download_speed} | <span>\udb86\uddb2</span>{upload_speed}"
-      label_alt: "Download {download_speed} \ue621 Upload {upload_speed}"
+      label: "<span>\uEA70</span>"
+      label_alt: "<span>\udb86\uddb3</span>{download_speed} | <span>\udb86\uddb2</span>{upload_speed}" # <span>\uEAE7</span>
       update_interval: 1000 # Update interval should be a multiple of 1000
       callbacks:
         on_left: "toggle_label"
@@ -354,6 +402,22 @@ widgets:
       image_path: "C:\\Users\\Taran\\Documents\\Customisation\\Backgrounds" # Path to folder with images
       change_automatically: false # Automatically change wallpaper
       update_interval: 60 # If change_automatically is true, update interval in seconds
+      gallery:
+        enabled: true
+        blur: true
+        image_width: 200
+        image_per_page: 8
+        show_buttons: false
+        orientation: "portrait"
+        image_spacing: 8
+        lazy_load: true
+        lazy_load_delay: 0
+        lazy_load_fadein: 400
+        image_corner_radius: 20
+        enable_cache: true
+      run_after:
+        - "wal -s -t -e -q -n -i {image}"
+        - "cmd.exe /c start /min pwsh ./helpers/wal.ps1"
 
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
@@ -406,3 +470,8 @@ widgets:
         on_left: "exec warp-cli connect"
         on_middle: "toggle_label"
         on_right: "exec warp-cli disconnect"
+
+  whkd:
+    type: "yasb.whkd.WhkdWidget"
+    options:
+      label: "<span>\uf11c</span>"
