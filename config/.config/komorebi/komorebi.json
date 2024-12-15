@@ -1,7 +1,7 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.29/schema.json",
-  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
-  "window_hiding_behaviour": "Cloak",
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Minimize",
   "cross_monitor_move_behaviour": "Insert",
   "default_workspace_padding": 7,
   "default_container_padding": 7,
@@ -10,15 +10,15 @@
   "animation": {
     "enabled": true,
     "duration": 300,
-    "style": "EaseInOutExpo",
-    "fps": 60
+    "style": "EaseOutExpo",
+    "fps": 165
   },
   "border": true,
-  "border_width": 3,
+  "border_width": 4,
   "border_implementation": "Windows",
   "border_offset": -1,
   "border_colours": {
-    "single": "#907ae8",
+    "single": "#ddd71f",
     "stack": "#00a542",
     "monocle": "#ff3399",
     "unfocused": "#2a3035"
@@ -27,10 +27,32 @@
   "stackbar": {
     "mode": "Never"    
   },
-  "float_rules": [
+  "floating_applications": [
     {
       "kind": "Exe",
       "id": "explorer.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Motrix.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "ApplicationFrameHost.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "OneCommander.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "ShareX",
       "matching_strategy": "Equals"
     },
     {
@@ -67,11 +89,6 @@
       "kind": "Title",
       "id": "FileBot",
       "matching_strategy": "Equals"
-    },
-    {
-      "kind": "Exe",
-      "id": "OneCommander.exe",
-      "matching_strategy": "Equals"
     }
   ],
   "monitors": [
@@ -79,11 +96,11 @@
       "workspaces": [
         {
           "name": "Home",
-          "layout": "VerticalStack"
+          "layout": "BSP"
         },
         {
           "name": "Interwebs",
-          "layout": "VerticalStack"
+          "layout": "BSP"
         },
         {
           "name": "Code",
@@ -91,8 +108,8 @@
           "workspace_rules": [
             {
               "kind": "Exe",
-              "id": "Code",
-              "matching_strategy": "Equals"
+              "id": "^Code.exe$",
+              "matching_strategy": "Regex"
             }
           ]
         },
@@ -124,16 +141,7 @@
           "name": "Interwebs",
           "layout": "VerticalStack",
           "workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Arc",
-              "matching_strategy": "Equals"
-            },
-            {
-              "kind": "Exe",
-              "id": "zen",
-              "matching_strategy": "Equals"
-            }
+            
           ]
         },
         {
@@ -165,12 +173,7 @@
         {
           "name": "Social",
           "layout": "VerticalStack",
-          "workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Discord",
-              "matching_strategy": "Equals"
-            },
+          "workspace_rules": [           
             {
               "kind": "Exe",
               "id": "LINE",
@@ -200,7 +203,7 @@
           "workspace_rules": [
             {
               "kind": "Exe",
-              "id": "MusicBee",
+              "id": "MusicBee.exe",
               "matching_strategy": "Equals"
             }
           ]
