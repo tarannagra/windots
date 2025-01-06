@@ -88,6 +88,13 @@
     font-weight: 600;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 } */
+
+.system-widget .label {
+    color: rgb(243 ,170, 0);
+    font-size: 16px;
+}
+
+
 .power-menu-widget .label {
     color: rgb(206, 92, 92);
     font-size: 16px;

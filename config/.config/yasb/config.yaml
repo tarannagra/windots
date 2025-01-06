@@ -36,8 +36,8 @@ bars:
     widgets:
       left:
         [
-          "home",
-          # "win_button",
+          # "home",
+          "win_button",
           # "komorebi_workspaces",
           "clock",
           # "apps",
@@ -416,8 +416,8 @@ widgets:
         image_corner_radius: 20
         enable_cache: true
       run_after:
-        - "wal -s -t -e -q -n -i {image}"
-        - "cmd.exe /c start /min pwsh ./helpers/wal.ps1"
+        # - "wal -s -t -e -q -n -i {image}"
+        # - "cmd.exe /c start /min pwsh ./helpers/wal.ps1"
 
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
@@ -448,14 +448,16 @@ widgets:
   win_button:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\ue62a"
-      label_alt: "\ue62a"
+      label: "\uf0e7"
+      label_alt: "\uf0e7"
       class_name: "system-widget"
       callbacks:
       # maybe change this to not do this since it 
       # already does in the app thing in the middle
         on_left: "exec %LOCALAPPDATA%/FlowLauncher/Flow.Launcher.exe"
-  
+        on_right: "do_nothing"
+        on_middle: "do_nothing"
+
   warp:
     type: "yasb.custom.CustomWidget"
     options: 
