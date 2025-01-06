@@ -1,6 +1,6 @@
-# Taran's windots
+# Taran's windots - Komorebi Edition :D
 
-Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. I like Linux but University requires Windows, so here I am.
+Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. I like Linux but University (and gaming) requires Windows, so here I am.
 
 > [!IMPORTANT]
 > Moved `Backgrounds` to it's own repo:
@@ -8,7 +8,7 @@ Hello! Welcome to the `komorebi` branch of my Windows config that's being used d
 
 # Contents
 
-- [Taran's windots](#tarans-windots)
+- [Taran's windots - Komorebi Edition :D](#tarans-windots---komorebi-edition-d)
 - [Contents](#contents)
   - [🪟 Komorebi](#-komorebi)
     - [📸 Showcase](#-showcase)
@@ -19,16 +19,15 @@ Hello! Welcome to the `komorebi` branch of my Windows config that's being used d
       - [Discord (Running Vencord)](#discord-running-vencord)
         - [Online Themes](#online-themes)
         - [Plugins](#plugins)
+      - [Firefox](#firefox)
       - [Komorebi](#komorebi)
       - [MusicBee](#musicbee)
         - [Theme](#theme)
       - [Visual Studio Code](#visual-studio-code)
-        - [Theme](#theme-1)
+        - [Configuration](#configuration)
       - [Windows Terminal](#windows-terminal)
         - [Settings](#settings)
       - [YASB Reborn](#yasb-reborn)
-      - [Zen Browser](#zen-browser)
-        - [Mods](#mods)
 - [⭐ Ending notes](#-ending-notes)
 
 ## 🪟 Komorebi
@@ -39,7 +38,7 @@ I like Komorebi, it's different and it's got cool animations.
 
 #### 🖥️ Desktop
 
-![Default desktop](./assets/desktop.png)
+![Default desktop](./assets/desktop.jpg)
 
 #### 👨‍💻 Workflow
 
@@ -49,12 +48,12 @@ I like Komorebi, it's different and it's got cool animations.
 
 - [ButteryTaskbar2](https://github.com/LuisThiamNye/ButteryTaskbar2)
 - [Discord (Running Vencord)](https://github.com/Vendicated/Vencord)
+- [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 - [Komorebi](https://github.com/LGUG2Z/komorebi)
 - [MusicBee](https://getmusicbee.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Windows Terminal](https://github.com/microsoft/terminal)
 - [YASB Reborn](https://github.com/amnweb/yasb)
-- [Zen Browser](https://github.com/zen-browser/desktop)
 
 #### ButteryTaskbar2
 
@@ -81,6 +80,12 @@ Only showing plugins that're *not* built-in:
 - [vc-message-logger-enhanced](https://github.com/Syncxv/vc-message-logger-enhanced)
 - [vencord-base64-decoder](https://github.com/ThePirateStoner/vencord-base64-decoder)
 
+#### Firefox
+
+![Firefox Tab](./assets/firefox.png)
+
+This Firefox instance is modified using a custom `userChrome.css` file. This is **not my code**. This is [Shimmer](https://github.com/nuclearcodecat/shimmer)! I enjoy it a lot, it has a good aesthetic, [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) support and animations.
+
 #### Komorebi
 
 > [!IMPORTANT]
@@ -101,21 +106,23 @@ Find the remaining configuration [here](./config/.config/komorebi/komorebi.json)
 
 ![Visual Studio Code preview](./assets/vsc.png)
 
-##### Theme
+Please note that the yellow border around the window is managed by [komorebi](#komorebi).
 
-- Tokyo Night
+##### Configuration
+
+I have followed a tutorial online to heavily customise my user interface, font family and more. You can find my configuration [here](./config/Visual%20Studio%20Code/settings.json).
 
 #### Windows Terminal
 
 ![Windows Terminal w/ splitting](./assets/terminals.png)
 
-I have modified this to be able to replicate my [wezterm config](./config/.wezterm.lua).
+I have modified Windows Terminal to be able to replicate my [wezterm config](./config/.wezterm.lua).
 
 ##### Settings
 
 - [PowerShell](https://github.com/PowerShell/PowerShell) & Modules:
-  - Terminal-Icons
-  - z
+  - [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
+  - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Starship](https://starship.rs/)
 
 #### YASB Reborn
@@ -123,30 +130,6 @@ I have modified this to be able to replicate my [wezterm config](./config/.wezte
 This is the bar along the top of each image where visible.
 
 Install the bar at [this link](https://github.com/amnweb/yasb), enable startup & copy the `config.yaml` & `styles.css` into `~/.config/yasb/`.
-
-#### Zen Browser
-
-![Zen Browser w/ mTab](./assets/zen_mtab.png)
-
-##### Mods
-
-To install mods, go to [this link](https://zen-browser.app/mods) & press install on any you find cool.
-
-- Audio TabIcon Plus
-- Better UniExtBtn
-- Better Unloaded Tabs
-- Cleaner Extension Menu
-- Disable Rounded Corners
-- Floating findbar
-- Floating URLbar
-- Minimal sidebar
-- No Sidebar Scrollbar
-- Private Mode Highlighting
-- Smaller Compact Mode
-- Super URL Bar
-- Tokyo Night Moon (this one is the theme)
-- Uniform Workspaces Button
-- Zen Minimal Exit Menu
 
 # ⭐ Ending notes
 
