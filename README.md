@@ -98,7 +98,8 @@ Find the remaining configuration [here](./config/.config/komorebi/komorebi.json)
 
 ![MusicBee preview](./assets/musicbee.png)
 
-> [!IMPORTANT] Fix for MusicBee and YASB
+> [!IMPORTANT] 
+> A hacky fix for MusicBee and YASB
 > Find [this repository](https://github.com/HenryPDT/mb_MediaControl) to be helpful.
 > This is a hacky workaround so be cautious when using it.
 
