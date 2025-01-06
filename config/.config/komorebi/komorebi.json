@@ -9,13 +9,13 @@
   "transparency_alpha": 255,
   "animation": {
     "enabled": true,
-    "duration": 300,
-    "style": "EaseOutExpo",
+    "duration": 150,
+    "style": "Linear",
     "fps": 165
   },
   "border": true,
-  "border_width": 4,
-  "border_implementation": "Windows",
+  "border_width": 2,
+  "border_implementation": "Komorebi",
   "border_offset": -1,
   "border_colours": {
     "single": "#ddd71f",
@@ -23,6 +23,7 @@
     "monocle": "#ff3399",
     "unfocused": "#2a3035"
   },
+  "border_style": "System",
   "mouse_follows_focus": false,
   "stackbar": {
     "mode": "Never"    
