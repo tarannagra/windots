@@ -1,0 +1,238 @@
+{
+    "workbench.statusBar.visible": false,
+    "workbench.colorTheme": "Bearded Theme Coffee",
+    "workbench.sideBar.location": "right",
+    "editor.lightbulb.enabled": "off",
+    "editor.guides.indentation": false,
+    "breadcrumbs.enabled": true, // keeping the notifier that tells me where i am at or what function
+    "breadcrumbs.filePath": "last", // so clean
+    "editor.hover.enabled": true,
+    "editor.hover.delay": 500,
+    "editor.matchBrackets": "never",
+    "workbench.tips.enabled": false,
+    "workbench.editor.showIcons": true,
+
+    "editor.scrollbar.horizontal": "hidden",
+    "window.menuBarVisibility": "visible", // * toggle key is alt, press and then can see options again
+    "window.title": "${activeEditorShort}", // •
+
+    // * Following section about Fonts (both within the editor and the terminal)
+    // other great fonts within Monaspace:
+    // Radon
+    // Krypton
+    // Argon
+    // Neon
+    "editor.fontFamily": "'Monaspace Radon', 'BitStreamVeraSansMono NF'",
+    // if moving from Monaspace (but why would you???), then uncomment the following line
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
+
+    // * Terminal Fonts
+    // Plan is to keep it matching so it looks *alsmost* seamless
+    "terminal.integrated.fontFamily": "Monaspace Radon", // or BitStreamVeraSansMono NF
+    "terminal.integrated.fontSize": 12,
+
+    "window.titleBarStyle": "custom",
+    "editor.fontSize": 13,
+    "editor.codeLens": false,
+    "editor.smoothScrolling": true,
+    "workbench.activityBar.location": "hidden",
+    "editor.tabSize": 4,
+    "workbench.editor.showTabs": "multiple",
+    "editor.minimap.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.cursorBlinking": "expand",
+    "editor.occurrencesHighlight": "off",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": false
+    },
+    "clangd.detectExtensionConflicts": false,
+    "explorer.confirmDelete": false,
+    "grammarly.files.include": [
+        "**/readme.md",
+        "**/README.md",
+        "**/*.txt",
+        "**/*.Rmd"
+    ],
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "window.zoomLevel": 2,
+    "workbench.startupEditor": "none",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "terminal.external.linuxExec": "kitty",
+    "workbench.iconTheme": "bearded-icons",
+    "grammarly.config.documentDialect": "british",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageHumanRightsRelated": "off",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageRaceEthnicityRelated": "off",
+    "grammarly.config.suggestionCategories.possiblyPoliticallyIncorrectLanguage": "off",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageHumanRights": "off",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageGenderRelated": "off",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageFamilyRelated": "off",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageDisabilityRelated": "off",
+    "grammarly.config.suggestionCategories.possiblyBiasedLanguageAgeRelated": "off",
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "markdown-preview-enhanced.revealjsTheme": "black.css",
+    "files.associations": {
+        "string": "cpp",
+        "*.rmd": "markdown",
+        "iostream": "cpp",
+        "cstring": "cpp",
+        "ostream": "cpp"
+    },
+    "cmake.showOptionsMovedNotification": false,
+    "C_Cpp.default.cppStandard": "c++20",
+    "python.createEnvironment.trigger": "off",
+    "explorer.confirmDragAndDrop": false,
+    "makefile.configureOnOpen": false,
+    "vscord.status.problems.text": "- {problems_count} problems found!",
+    "vscord.status.details.text.debugging": "Debugging {file_name}{file_extension} 🚧",
+    "vscord.status.details.text.editing": "In {workspace} with {problems}",
+    "vscord.status.details.text.notInFile": "Not in a file :(",
+    "vscord.status.details.text.viewing": "In {workspace} with {problems}",
+    "editor.stickyScroll.enabled": false,
+    "update.showReleaseNotes": false,
+    "workbench.panel.showLabels": false,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-shell-escape",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "-shell-escape",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texminted",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pnw2tex",
+            "command": "pweave",
+            "args": [
+                "-f",
+                "tex",
+                "%DOC_EXT%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pnw2texminted",
+            "command": "pweave",
+            "args": [
+                "-f",
+                "texminted",
+                "%DOC_EXT%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "--print",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
+    "jupyter.askForKernelRestart": false,
+
+    // Custom CSS time via `Custom CSS and JS Loader`
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/Taran/Documents/Visual%20Studio%20Code%20Custom%20CSS/custom_vsc.css"
+    ],
+    "terminal.integrated.fontLigatures": true,
+    "window.commandCenter": false,
+    "extensions.ignoreRecommendations": true,
+}
