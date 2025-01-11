@@ -2,9 +2,7 @@
 
 Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. I like Linux but University (and gaming) requires Windows, so here I am.
 
-> [!IMPORTANT]
-> Moved `Backgrounds` to it's own repo:
-> https://github.com/tarannagra/Wallpapers
+Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
 # Contents
 
