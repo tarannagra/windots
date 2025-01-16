@@ -1,0 +1,71 @@
+7-Zip 24.07 (x64)                       7zip.7zip                                24.07            24.09          winget
+ShareX                                  ShareX.ShareX                            16.1.0           17.0.0         winget
+Docker Desktop                          Docker.DockerDesktop                     4.21.1           4.37.1         winget
+GIMP 2.10.38                            GIMP.GIMP                                2.10.38                         winget
+Mozilla Firefox (x64 en-GB)             Mozilla.Firefox                          134.0                           winget
+ONLYOFFICE Desktop Editors 8.0 (x64)    ONLYOFFICE.DesktopEditors                < 8.0.1          8.2.2          winget
+Proton VPN                              Proton.ProtonVPN                         3.5.0                           winget
+R for Windows 4.2.3                     RProject.R                               4.2.3            4.4.2          winget
+VLC media player                        VideoLAN.VLC                             3.0.21                          winget
+GlazeWM                                 glzr-io.glazewm                          3.1.1            3.7.0          winget
+whkd                                    LGUG2Z.whkd                              0.2.1            0.2.4          winget
+komorebi                                LGUG2Z.komorebi                          0.1.31           0.1.32         winget
+OneCommander                            MilosParipovic.OneCommander              3.92.0           3.94.5         winget
+DB Browser for SQLite                   DBBrowserForSQLite.DBBrowserForSQLite    3.12.2           3.13.1         winget
+Logitech G HUB                          Logitech.GHUB                            2024.2.534136    2024.9.9333    winget
+tre-command                             ca.duan.tre-command                      0.4.0                           winget
+Node.js                                 OpenJS.NodeJS.LTS                        22.12.0          22.13.0        winget
+CMake                                   Kitware.CMake                            3.25.1           3.31.4         winget
+Nilesoft Shell                          Nilesoft.Shell                           1.9.15           1.9.18         winget
+GitHub CLI                              GitHub.cli                               2.20.2           2.65.0         winget
+NVIDIA GeForce Experience 3.28.0.417    Nvidia.GeForceExperience                 3.28.0.417                      winget
+NVIDIA PhysX System Software 9.23.1019  Nvidia.PhysX                             9.23.1019                       winget
+starship                                Starship.Starship                        1.20.1           1.21.1         winget
+TeraCopy                                CodeSector.TeraCopy                      3.17                            winget
+Zebar                                   glzr-io.zebar                            0.0.0            2.6.1          winget
+Jellyfin Server 10.9.7                  Jellyfin.Server                          10.9.7           10.10.3        winget
+LLVM                                    LLVM.LLVM                                16.0.6           19.1.6         winget
+Microsoft Edge                          Microsoft.Edge                           131.0.2903.112   131.0.2903.146 winget
+Nmap 7.93                               Insecure.Nmap                            7.93                            winget
+OBS Studio                              OBSProject.OBSStudio                     30.2.2           31.0.0         winget
+RStudio                                 Posit.RStudio                            2023.09.0+463    2024.12.0+467  winget
+Steam                                   Valve.Steam                              2.10.91.91                      winget
+Epic Games Launcher                     EpicGames.EpicGamesLauncher              1.3.51.0         1.3.128.0      winget
+Prowlarr version 1.19.0                 TeamProwlarr.Prowlarr                    1.19.0           1.29.2         winget
+Python Launcher                         Python.Launcher                          3.12.0                          winget
+QuickLook                               QL-Win.QuickLook                         3.7.3.0                         winget
+Jellyfin Media Player                   Jellyfin.JellyfinMediaPlayer             1.11.1                          winget
+Motrix 1.8.19                           agalwood.Motrix                          1.8.19                          winget
+Burp Suite Community Edition 2023.3.3   PortSwigger.BurpSuite.Community          2023.3.3         2024.11.2      winget
+AltSnap                                 AltSnap.AltSnap                          1.64                            winget
+Discord                                 Discord.Discord                          1.0.9008         1.0.9177       winget
+Progress Telerik Fiddler Classic        Telerik.Fiddler.Classic                  5.0.20245.10105                 winget
+Flow Launcher                           Flow-Launcher.Flow-Launcher              1.18.0           1.19.4         winget
+scrcpy                                  Genymobile.scrcpy                        2.4              3.1            winget
+Helix                                   Helix.Helix                              24.03            25.01          winget
+Hugo (Extended)                         Hugo.Hugo.Extended                       0.133.0          0.140.2        winget
+MiKTeX                                  MiKTeX.MiKTeX                            24.4                            winget
+Postman x86_64 11.22.0                  Postman.Postman                          11.22.0          11.27.3        winget
+Rustup: the Rust toolchain installer    Rustlang.Rustup                          Unknown          1.27.1         winget
+Spotify                                 Spotify.Spotify                          1.2.19.941.gbf2ÔÇª 1.2.53.440.g7ÔÇª winget
+SumatraPDF                              SumatraPDF.SumatraPDF                    3.5.2                           winget
+HTTP Toolkit 1.16.0                     HTTPToolKit.HTTPToolKit                  1.16.0                          winget
+Beeper 3.110.1                          Beeper.Beeper                            3.110.1                         winget
+Insomnia                                Insomnia.Insomnia                        2023.5.8                        winget
+fzf                                     junegunn.fzf                             0.52.0           0.57.0         winget
+Roblox Player for Taran                 Roblox.Roblox                            Unknown          1.6.2.6410741  winget
+bat                                     sharkdp.bat                              0.24.0           0.25.0         winget
+fd                                      sharkdp.fd                               10.2.0                          winget
+Telegram Desktop                        Telegram.TelegramDesktop                 5.8.3            5.10.3         winget
+Microsoft Visual Studio Code (User)     Microsoft.VisualStudioCode               1.96.2                          winget
+Python 3.7.9 (64-bit)                   Python.Python.3.7                        3.7.9                           winget
+Python 3.12.0 (64-bit)                  Python.Python.3.12                       3.12.0           3.12.8         winget
+Python 3.11.1 (64-bit)                  Python.Python.3.11                       3.11.1           3.11.9         winget
+Ubuntu                                  Canonical.Ubuntu                         2404.1.66.0                     winget
+Files                                   FilesCommunity.Files                     3.6.0.0          3.8.0.0        winget
+App Installer                           Microsoft.AppInstaller                   1.24.25200.0                    winget
+PowerShell                              Microsoft.PowerShell                     7.4.6.0                         winget
+Dev Home                                Microsoft.DevHome                        0.1900.687.0     0.1901.687.0   winget
+Windows Terminal                        Microsoft.WindowsTerminal                1.21.3231.0                     winget
+Windows Subsystem for Linux             Microsoft.WSL                            2.3.26.0                        winget
+Arc                                     TheBrowserCompany.Arc                    1.33.0.3189      1.36.1.4521    winget
