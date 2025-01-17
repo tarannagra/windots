@@ -21,7 +21,7 @@ Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
       - [Komorebi](#komorebi)
       - [MusicBee](#musicbee)
         - [Theme](#theme)
-      - [Visual Studio Code](#visual-studio-code)
+      - [VSCodium](#vscodium)
         - [Configuration](#configuration)
       - [Windows Terminal](#windows-terminal)
         - [Settings](#settings)
@@ -49,7 +49,7 @@ I like Komorebi, it's different and it's got cool animations.
 - [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 - [Komorebi](https://github.com/LGUG2Z/komorebi)
 - [MusicBee](https://getmusicbee.com/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [VSCodium](https://vscodium.com/)
 - [Windows Terminal](https://github.com/microsoft/terminal)
 - [YASB Reborn](https://github.com/amnweb/yasb)
 
@@ -105,9 +105,13 @@ Find the remaining configuration [here](./config/.config/komorebi/komorebi.json)
 
 - [Aura Dark 3.0](https://www.getmusicbee.com/addons/skins/498/aura-dark/)
 
-#### Visual Studio Code
+#### VSCodium
 
 ![Visual Studio Code preview](./assets/vsc.png)
+
+For using VSCodium, place [product.json](./config/Visual%20Studio%20Code/product.json) in:
+
+- `%APPDATA%/VSCodium/`
 
 Please note that the yellow border around the window is managed by [komorebi](#komorebi).
 
