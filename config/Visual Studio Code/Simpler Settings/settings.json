@@ -1,0 +1,75 @@
+{
+    // Taran's custom VSCodium settings.json file :D
+
+    // Theming
+    "workbench.iconTheme": "bearded-icons",
+    
+    // Sidebar 
+    "workbench.sideBar.location": "right",
+    
+    // Interface
+    "workbench.statusBar.visible": false,
+    "breadcrumbs.enabled": true, // keeping the notifier that tells me where i am at or what function
+    "breadcrumbs.filePath": "last", // so clean
+    "window.menuBarVisibility": "visible",
+    "window.titleBarStyle": "custom",
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.layoutControl.enabled": false,
+    
+    // Editor
+    "editor.lightbulb.enabled": "off",
+    "editor.guides.indentation": false,
+    "editor.hover.enabled": true,
+    "editor.hover.delay": 500,
+    "editor.matchBrackets": "never",
+    "editor.scrollbar.horizontal": "hidden",
+    "workbench.tips.enabled": false,
+    "workbench.editor.showIcons": true,
+    "editor.fontFamily": "'Monaspace Radon Regular', Consolas, monospace",
+    // fontLig only if not using a Monaspace Font
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
+    "workbench.panel.showLabels": false,
+    "editor.fontSize": 15,
+    "editor.codeLens": false,
+    "editor.smoothScrolling": true,
+    "editor.tabSize": 4,
+    "editor.minimap.enabled": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.cursorBlinking": "expand", // personal option here
+    "editor.occurrencesHighlight": "off",
+    
+    // Terminal
+    "terminal.integrated.fontFamily": "'Monaspace Radon Regular'",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    // Extensions
+    /// Copilot
+    "github.copilot.enable": {
+        "*": false,
+    },
+
+    /// Auto-Light-Dark-Theme
+    // for windows, as per automatic dark/light theming, can use this for changing theme based on time/dark(light) mode
+    "vscode-auto-light-dark-theme.darkTheme": "Bearded Theme Coffee",
+    "vscode-auto-light-dark-theme.lightTheme": "Bearded Theme Coffee Cream",
+    "vscode-auto-light-dark-theme.autoToggle": true,
+    "workbench.startupEditor": "none",
+
+    /// Custom CSS and JS Loader
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/subwa/Documents/Visual%20Studio%20Code%20Custom%20CSS/custom_vsc.css",
+    ],
+    "chat.commandCenter.enabled": false,
+    "workbench.colorTheme": "Bearded Theme Coffee",
+    "vscode-auto-light-dark-theme.showToggleButton": false,
+    "vscode-auto-light-dark-theme.toggleSetting": "system",
+    "workbench.preferredLightColorTheme": "Bearded Theme Coffee Cream",
+    "workbench.preferredDarkColorTheme": "Bearded Theme Coffee",
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.stickyScroll.enabled": false,
+    "explorer.confirmDelete": false
+}
