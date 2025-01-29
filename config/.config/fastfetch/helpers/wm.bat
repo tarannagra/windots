@@ -10,6 +10,8 @@ set wm=DWM
 
 tasklist /fi "imagename eq komorebi.exe" | find ":" > nul
 if errorlevel 1 set wm=Komorebi
+
+REM unsure if this is GlazeWM's executable name, but it can be changed
 tasklist /fi "imagename eq glazewm.exe" | find ":" > nul
 if errorlevel 1 set wm=GlazeWM
 
