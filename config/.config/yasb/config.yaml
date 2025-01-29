@@ -1,3 +1,8 @@
+# Taran's YASB Configuration :D
+
+## I have an Arch setup, and I am used to that, so this will be an attempt at a recreation of it.
+### This one is bloaty, things everywhere, so I shall make it as simple as my Arch bar :D
+
 watch_stylesheet: true
 watch_config: true
 debug: false
@@ -6,28 +11,27 @@ komorebi:
   start_command: "komorebic start --whkd"
   stop_command: "komorebic stop --whkd"
   reload_command: "komorebic stop --whkd && komorebic start --whkd"
-  
+
 bars:
   status-bar:
     enabled: true
-    #screens: ['DELL P2419H (1)'] # If you want to show on specific screen
     screens: ['*'] 
     class_name: "yasb-bar"
     alignment:
       position: "top"
       center: false
     blur_effect:
-      enabled: true # Blur effect will be applied to the bar
-      acrylic: false # Acrylic effect will be applied to the bar
-      dark_mode: false # Dark mode will add more shadow to the bar
-      round_corners: false # Default radius from OS
-      border_color: None # None, System or HEX color (this option is related to round_corners=true)
+      enabled: true
+      acrylic: false 
+      dark_mode: false
+      round_corners: false
+      border_color: None 
     window_flags:
       always_on_top: false
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 36
+      height: 42
     padding:
       top: 4
       left: 0
@@ -36,18 +40,14 @@ bars:
     widgets:
       left:
         [
-          # "home",
           "win_button",
-          # "komorebi_workspaces",
-          "clock",
-          # "apps",
-          # "whkd",
-          # "wallpapers",
+          komorebi_workspaces,
+          komorebi_active_layout,
           "active_window",
         ]
       center: [
-         "komorebi_workspaces",
-         "komorebi_active_layout"
+         "clock",
+         # "apps", # I have hotkeys for each of these, OR searching :D
          # "wallpapers"
         ]
       right:
@@ -55,14 +55,9 @@ bars:
           "media",
           "wallpapers",
           "wifi",
-          # "microphone",
           # "taskbar",
-          # "warp",
-          # "traffic",
-          # "cpu",
           # "bluetooth",
           "volume",
-          "battery",
           "power_menu"
         ]
         
@@ -133,7 +128,7 @@ widgets:
       hide_empty: true # Does not show if no music detected
       thumbnail_alpha: 80
       thumbnail_padding: 8
-      thumbnail_corner_radius: 4 # Having a subtle curve on the thumnail
+      thumbnail_corner_radius: 4 # Having a subtle curve on the thumbnail
       icons:
         prev_track: "\udb81\udcae"
         next_track: "\udb81\udcad"
@@ -148,7 +143,7 @@ widgets:
       label_no_window: ""
       label_icon: true
       label_icon_size: 16
-      max_length: 16
+      max_length: 20
       max_length_ellipsis: "..."
       monitor_exclusive: true
       callbacks:
@@ -168,13 +163,11 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a %d, %b %I:%M %p}"
-      label_alt: "{%A %d %B %Y, %I:%M}"
-      #locale: 'en_EN' # Langugae for date, you can set your own, example fr_FR
-      timezones: [] #Looking up time zone info from registry
-      #timezones: ["America/Montreal"]
+      label: "\uf017 {%I:%M %p}"
+      label_alt: "\ueab0 {%a, %d %b %Y}"
+      timezones: []
       callbacks:
-        on_left: "do_nothing"
+        on_left: "toggle_label"
 
   cpu:
     type: "yasb.cpu.CpuWidget"
@@ -307,7 +300,7 @@ widgets:
       api_key: '3bf4cf9a7c3f40d6b31174128242807' # Get your free API key from https://www.weatherapi.com/
       update_interval: 600 # Update interval in seconds, Min 600 seconds
       hide_decimal: true
-      location: 'Coventry, UK' # You can use "USA Los Angeles 90006" {COUNTRY CITY ZIP_CODE}, or just city.
+      location: 'UK' # You can use "USA Los Angeles 90006" {COUNTRY CITY ZIP_CODE}, or just city.
       callbacks:
         on_left: "do_nothing"
         on_right: "toggle_label"
@@ -349,7 +342,7 @@ widgets:
       animation_duration: 200 # Milisecond 
       button_row: 3 # Number of buttons in row, min 1 max 5
       buttons:
-        # lock: ["\uea75","Lock"]
+        lock: ["\uea75","Lock"]
         signout: ["\udb80\udf43","Sign out"]
         restart: ["\uead2","Restart"]
         sleep: ["\u23fe","Sleep"]
@@ -369,15 +362,11 @@ widgets:
         bottom: 0
         right: 8
       app_list:
-        - {icon: "\uf422", launch: "%LOCALAPPDATA%/FlowLauncher/Flow.Launcher.exe"}
-        - {icon: "\U000F14E7", launch: "%LOCALAPPDATA%/Obsidian/Obsidian.exe"}
-        - {icon: "\U000F0A1E", launch: "code"}
+        - {icon: "\uF48A", launch: "%LOCALAPPDATA%/Programs/Obsidian/Obsidian.exe"}
+        - {icon: "\U000F0A1E", launch: "codium"}
         - {icon: "\uF489", launch: "wt"}
-        - {icon: "\uF07C", launch: "onecommander"}
-        - {icon: "\U000F0239", launch: "C:\\Program Files\\Zen Browser\\zen.exe"}
-        # - {icon: "\uF268", launch: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"}
-        - {icon: "\udb83\ude09", launch: "C:\\Users\\Taran\\.config\\yasb\\helpers\\setwallpaper-rust.exe"}
-        # - {icon: "\udb84\udf55", launch: "widget"}
+        # - {icon: "\uF07C", launch: "onecommander"}
+        - {icon: "\U000F0239", launch: "firefox"}
         # Currently available to use quick_settings, notification_center, search, widget, launcher (launcher will trigger ALT+A)
   
   github:
@@ -399,9 +388,9 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb83\ude09</span>"
-      image_path: "C:\\Users\\Taran\\Documents\\Customisation\\Backgrounds" # Path to folder with images
-      change_automatically: false # Automatically change wallpaper
-      update_interval: 60 # If change_automatically is true, update interval in seconds
+      image_path: "C:\\Users\\subwa\\Documents\\Wallpapers\\walls"
+      change_automatically: false
+      update_interval: 60 # ONLY sets if change_automatically is set true
       gallery:
         enabled: true
         blur: true
@@ -416,8 +405,13 @@ widgets:
         image_corner_radius: 20
         enable_cache: true
       run_after:
-        # - "wal -s -t -e -q -n -i {image}"
-        # - "cmd.exe /c start /min pwsh ./helpers/wal.ps1"
+        - "wal -t -e -n -i {image}"
+        - "pywalfox update"
+        # wal -> pywal16 (pip install pywal16)
+        ## -t -> Skip in TTY
+        ## -e -> Skip reloading in Linux based apps
+        ## -n -> Skip setting wallpaper (since widget this does it)
+        ## -i -> Image input (YASB will do this for you)
 
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
@@ -448,12 +442,10 @@ widgets:
   win_button:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\uf0e7"
+      label: "\ue62a"
       label_alt: "\uf0e7"
       class_name: "system-widget"
       callbacks:
-      # maybe change this to not do this since it 
-      # already does in the app thing in the middle
         on_left: "exec %LOCALAPPDATA%/FlowLauncher/Flow.Launcher.exe"
         on_right: "do_nothing"
         on_middle: "do_nothing"

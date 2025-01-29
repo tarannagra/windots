@@ -1,5 +1,3 @@
-@import url('../../.cache/wal/colors.css');
-
 * {
     color: whitesmoke;
     font-size: 12px;
@@ -13,6 +11,7 @@
     padding: 0 8px;
     margin: 0;
     /* Default colour: #1e1e2e */
+    /* background-color: var(--colors0); */
     background-color: rgba(146, 145, 155, 0.01);
     /* border-radius: 12px; */
 }
@@ -60,12 +59,12 @@
 }
 .komorebi-workspaces .ws-btn.populated {
     color: rgba(0, 0, 0, 0);
-    background-color: rgb(139, 143, 156);
+    background-color: rgb(72, 161, 102);
 }
 
 .komorebi-workspaces .ws-btn.active {
     color: rgba(0, 0, 0, 0);
-    background-color: rgb(191, 195, 209);
+    background-color: rgb(191, 197, 209);
     width: 36px;
     height: 10px;
 }
@@ -80,17 +79,8 @@
     padding: 0 0 0 0;
 }
 
-/*POWER MENU WIDGET*/
-/* .uptime {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-} */
-
 .system-widget .label {
-    color: rgb(243 ,170, 0);
+    color: rgb(173, 228, 230);
     font-size: 16px;
 }
 
@@ -167,32 +157,14 @@
     color: #cba6f7;
     font-size: 14px;
 }
-/* WEATHER WIDGET */
-.weather-widget .icon {
-    font-size: 16px;
-    margin: 0 2px 0px 0;
+
+.wifi-widget .icon {
+    /* color: #89b4fa; */
+    margin: 1px 2px 0 0;
 }
-.weather-widget .icon.sunnyDay {
-    color: rgb(221, 210, 107);
-}
-.weather-widget .icon.clearNight {
-    color: rgb(107, 189, 221);
-    font-size: 18px;
-    margin: -1px 2px 0px 0;
-}
-.weather-widget .icon.rainyNight {
-    font-size: 16px;
-}
-.weather-widget .icon.cloudyDay {
-    font-size: 18px;
-    color: rgb(221, 210, 107);
-}
-.weather-widget .icon.rainyDay {
-    color: rgb(245, 224, 220)
-} 
+
 
 /* Media */
-
 .media-widget {
     padding: 0;
     padding-left: 6px;
@@ -204,12 +176,13 @@
     background-color: rgba(0, 0, 0, 0.0);
 }
 .media-widget .btn {
-    color: var(--foreground);
+    color: white;
     padding: 0;
     font-size: 18px;
 }
 .media-widget .btn:hover {
-    color: #89b4fa;
+    color: #faa089;
+    /* color: #89b4fa; */
 }
 .media-widget .btn.play {
     font-size: 24px;
@@ -222,7 +195,7 @@
 }
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
-    color: #4e525c;
+    color: #4c4f58;
 }
 
 
@@ -246,9 +219,17 @@
   color: #f38ba8;
 }
 
+
+
+/* Wallpaper Styling */
 .wallpapers-widget {
     padding: 0 6px 0 6px;
 }
+
+.wallpapers-widget .icon {
+    margin: 1px 2px 0 0;
+}
+
 .wallpapers-gallery-window {
     background-color: rgba(85, 42, 240, 0.01);
     border: 0;
@@ -276,33 +257,4 @@
 }
 .wallpapers-gallery-image.focused {
     border: 4px solid #6889be;
-}
-
-/* Home Widget */
-.home-widget {
-    padding: 0 4px 0 12px;
-}
-.home-widget .icon {
-    color: white;
-}
-/* .home-widget .icon:hover {
-    color: var(--color2);
-} */
-.home-menu {
-    background-color: #080809;
-}
-.home-menu .menu-item {
-    padding: 8px 48px 9px 16px;
-    font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    font-weight: 600;
-}
-.home-menu .menu-item:hover {
-    background-color: rgba(128, 130, 158, 0.15);
-    color: #fff;
-}
-.home-menu:separator {
-    height: 1px;
-    background-color: rgba(128, 130, 158, 0.3);
 }
