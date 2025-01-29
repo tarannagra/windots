@@ -5,6 +5,8 @@ REM !! It may be slow, but it's okay if it works :D
 
 REM For adding any extra, simply copy the command and then assign the .exe and set wm=WM NAME
 
+REM if not using any WM, then default to DWM
+set wm=DWM
 
 tasklist /fi "imagename eq komorebi.exe" | find ":" > nul
 if errorlevel 1 set wm=Komorebi
