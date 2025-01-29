@@ -13,30 +13,31 @@ alt + shift + r         : komorebic reload-configuration
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + q                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
 
-alt + q                 :  start zen
-alt + e : start OneCommander
+win + q                 : start firefox
+win + e 				: start explorer
 
-alt + return             : start wt
+win + return            : start "alacritty"
+win + space             : start "flow.launcher"
 
-
-alt + shift + q         : komorebic close
+win + shift + q         : komorebic close
 alt + m                 : komorebic minimize
-alt + x                 : komorebic toggle-maximize
+win + x                 : komorebic toggle-maximize
+# alt + shift + o         : start obsidian
 
 # Focus windows
-alt + left                 : komorebic focus left
-alt + down                 : komorebic focus down
-alt + up                   : komorebic focus up
-alt + right                : komorebic focus right
-alt + shift + oem_4     : komorebic cycle-focus previous # oem_4 is [
-alt + shift + oem_6     : komorebic cycle-focus next # oem_6 is ]
+win + left                 : komorebic focus left
+win + down                 : komorebic focus down
+win + up                   : komorebic focus up
+win + right                : komorebic focus right
+win + shift + oem_4     : komorebic cycle-focus previous # oem_4 is [
+win + shift + oem_6     : komorebic cycle-focus next # oem_6 is ]
 
 # Move windows
-alt + shift + left         : komorebic move left
-alt + shift + down         : komorebic move down
-alt + shift + up           : komorebic move up
-alt + shift + right        : komorebic move right
-alt + shift + return    : komorebic promote
+win + shift + left         : komorebic move left
+win + shift + down         : komorebic move down
+win + shift + up           : komorebic move up
+win + shift + right        : komorebic move right
+win + shift + return    : komorebic promote
 
 # Stack windows
 # INFO: Stacking windows means to tab thru your apps as if you could do alt+tab but only for the stacked apps!
@@ -55,7 +56,7 @@ alt + shift + oem_plus  : komorebic resize-axis vertical increase
 alt + shift + oem_minus : komorebic resize-axis vertical decrease
 
 # Manipulate windows
-alt + shift + space     : komorebic toggle-float
+win + shift + space     : komorebic toggle-float
 alt + shift + f         : komorebic toggle-monocle # ??? the eye glass?
 
 # Window manager options
@@ -67,17 +68,17 @@ alt + p                 : komorebic toggle-pause
 # alt + y                 : komorebic flip-layout vertical
 
 # Workspaces
-alt + 1                 : komorebic focus-workspace 0
-alt + 2                 : komorebic focus-workspace 1
-alt + 3                 : komorebic focus-workspace 2
-alt + 4                 : komorebic focus-workspace 3
-alt + 5                 : komorebic focus-workspace 4
-alt + 6                 : komorebic focus-workspace 5
+win + 1                 : komorebic focus-workspace 0
+win + 2                 : komorebic focus-workspace 1
+win + 3                 : komorebic focus-workspace 2
+win + 4                 : komorebic focus-workspace 3
+win + 5                 : komorebic focus-workspace 4
+win + 6                 : komorebic focus-workspace 5
 
 # Move windows across workspaces
-alt + shift + 1         : komorebic move-to-workspace 0
-alt + shift + 2         : komorebic move-to-workspace 1
-alt + shift + 3         : komorebic move-to-workspace 2
-alt + shift + 4         : komorebic move-to-workspace 3
-alt + shift + 5         : komorebic move-to-workspace 4
-alt + shift + 6         : komorebic move-to-workspace 5
+win + shift + 1         : komorebic move-to-workspace 0
+win + shift + 2         : komorebic move-to-workspace 1
+win + shift + 3         : komorebic move-to-workspace 2
+win + shift + 4         : komorebic move-to-workspace 3
+win + shift + 5         : komorebic move-to-workspace 4
+win + shift + 6         : komorebic move-to-workspace 5
