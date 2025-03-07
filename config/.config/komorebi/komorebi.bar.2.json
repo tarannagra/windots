@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.bar.json",
+  "monitor": 0,
+  "height": 40,
+  "padding": { 
+    "vertical": 25,
+    "horizontal": 17
+  },
+  "font_family": "JetBrains Mono",
+  "font_size": 13,
+  "max_label_width": 300,
+  "theme":{
+    "palette": "Base16",
+    "name": "Gotham",
+    "accent": "Base0C"
+  },
+  "grouping": {
+    "kind": "Alignment",
+    "style": "DefaultWithShadowB4O1S3",
+    "transparency_alpha": 200,
+    "rounding": 5
+  },
+  "left_widgets": [
+    {
+      "Komorebi": {
+        "workspaces": {
+          "enable": true,
+          "hide_empty_workspaces": false
+        },
+        "layout": {
+          "enable": true,
+          "display": "IconAndText",
+          "options": [
+            "BSP",
+            "VerticalStack",
+            "UltrawideVerticalStack",
+            "Grid",
+            "RightMainVerticalStack",
+            "Floating",
+            "Paused"
+          ]
+        },
+        "focused_window": {
+          "enable": true,
+          "show_icon": true,
+          "display": "IconAndTextOnSelected"
+        }
+      }
+    }
+  ],
+  "right_widgets": [
+    {
+      "Update": {
+        "enable": true
+      }
+    },
+    {
+      "Media": {
+        "enable": true
+      }
+    },
+    {
+      "Network": {
+        "enable": true,
+        "show_total_data_transmitted": false,
+        "show_network_activity": false
+      }
+    },
+    {
+      "Date": {
+        "enable": true,
+        "format": "DayDateMonthYear"
+      }
+    },
+    {
+      "Time": {
+        "enable": true,
+        "format": "TwelveHourWithoutSeconds",
+        "label_prefix": "Icon"
+      }
+    }
+  ]
+}
