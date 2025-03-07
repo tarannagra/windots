@@ -1,0 +1,27 @@
+[general]
+working_directory = "C:\\Users\\subwa" # set to %userprofile%
+live_config_reload = true
+
+import = [
+    "~/.cache/wal/colors-alacritty.toml"
+]
+
+[window]
+decorations = "none"
+opacity = 0.87
+dynamic_padding = true
+
+[font]
+normal = {family = "JetBrainsMono NF", style = "Medium"}
+size = 14
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Beam", blinking = "On"}
+blink_interval = 500
+
+[terminal]
+shell = "pwsh"
+
