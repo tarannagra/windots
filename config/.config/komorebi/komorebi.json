@@ -1,25 +1,31 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
-  "window_hiding_behaviour": "Minimize",
+  "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "default_workspace_padding": 7,
   "default_container_padding": 7,
   "transparency": true,
-  "transparency_alpha": 255,
+  "transparency_alpha": 250,
   "animation": {
     "enabled": true,
     "duration": 450,
     "fps": 120,
     "style": {
-        "movement": "EaseInOutCubic",
+        "movement": "EaseOutExpo",
         "transparency": "Linear"
     }
   },
-  "border": true,
+  "bar_configurations": [
+    "$Env:USERPROFILE/.config/komorebi/komorebi.bar.json",
+    "$Env:USERPROFILE/.config/komorebi/komorebi.bar.2.json"
+  ],
+
+  // "border": false,
+  // "border_implementation": "Komorebi",
+  // "border_offset": -1,
+  
   "border_width": 3,
-  "border_implementation": "Komorebi",
-  "border_offset": -1,
   "border_colours": {
     "single": "#11beb6",
     "stack": "#0dd3c9",
@@ -29,8 +35,9 @@
   "border_style": "Square",
   "mouse_follows_focus": false,
   "stackbar": {
-    "mode": "Never"    
+    "mode": "Never" // never doesn't mean it's not on; just not showing within the wm
   },
+  "floating_window_aspect_ratio": "Widescreen",
   "floating_applications": [
     {
       "kind": "Exe",
@@ -99,15 +106,15 @@
     {
       "workspaces": [
         {
-          "name": "Home",
+          "name": "1",
           "layout": "BSP"
         },
         {
-          "name": "Interwebs",
+          "name": "2",
           "layout": "BSP"
         },
         {
-          "name": "Code",
+          "name": "3",
           "layout": "VerticalStack",
           "workspace_rules": [
             {
@@ -118,7 +125,7 @@
           ]
         },
         {
-          "name": "Game",
+          "name": "4",
           "layout": "VerticalStack",
           "workspace_rules": [
             {
@@ -134,7 +141,7 @@
           ]
         },
         {
-          "name": "Media",
+          "name": "5",
           "layout": "VerticalStack"
         }
       ]
@@ -142,14 +149,14 @@
     {
       "workspaces": [ 
         {
-          "name": "Interwebs",
+          "name": "1",
           "layout": "VerticalStack",
           "workspace_rules": [
             
           ]
         },
         {
-          "name": "Game",
+          "name": "2",
           "layout": "VerticalStack",
           "workspace_rules": [
             {
@@ -175,7 +182,7 @@
           ]
         },
         {
-          "name": "Social",
+          "name": "3",
           "layout": "VerticalStack",
           "workspace_rules": [           
             {
@@ -186,7 +193,7 @@
           ]
         },
         {
-          "name": "Download",
+          "name": "4",
           "layout": "VerticalStack",
           "workspace_rules": [
             {
@@ -202,15 +209,9 @@
           ]
         },
         {
-          "name": "Media",
+          "name": "5",
           "layout": "VerticalStack",
-          "workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "MusicBee.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "workspace_rules": []
         }
       ]
     }
