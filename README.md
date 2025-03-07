@@ -9,15 +9,24 @@ Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
 ## ✅ Current Workflow w/ KomoEverything
 
-<!-- ### 📸 Showcase
+### 📸 Showcase
 
 #### 🖥️ Desktop
 
-![Default desktop](./assets/desktop.jpg)
+![Default desktop](./assets/komo-everything/desktop.png)
 
 #### 👨‍💻 Workflow
 
-![A true workflow](./assets/workflow.png) -->
+![A true workflow](./assets/komo-everything/workflow.png)
+
+### ✨ Programs
+
+- [Komorebi](https://github.com/LGUG2Z/komorebi)
+- [Masir](https://github.com/LGUG2Z/masir)
+- [Vesktop](https://github.com/Vencord/Vesktop)
+- [VSCodium](https://vscodium.com/)
+- Notify - custom notify program, located [here](./config/.config/notifications/notify.py).
+
 
 ## ⚠️ Legacy Workflow w/ Komorebi & YASB
 
