@@ -1,38 +1,15 @@
 # Taran's windots - Komorebi Edition :D
 
-Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. I like Linux but University (and gaming) requires Windows, so here I am.
+Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like to have a clean and minimal desktop instead of bloat everywhere. I prefer Linux, but I for some reason keep Windows installed.
 
 Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
-# Contents
+# ‼️ Refactoring this README
 
-- [Taran's windots - Komorebi Edition :D](#tarans-windots---komorebi-edition-d)
-- [Contents](#contents)
-  - [🪟 Komorebi](#-komorebi)
-    - [📸 Showcase](#-showcase)
-      - [🖥️ Desktop](#️-desktop)
-      - [👨‍💻 Workflow](#-workflow)
-    - [✨ Programs](#-programs)
-      - [ButteryTaskbar2](#butterytaskbar2)
-      - [Discord (Running Vencord)](#discord-running-vencord)
-        - [Online Themes](#online-themes)
-        - [Plugins](#plugins)
-      - [Firefox](#firefox)
-      - [Komorebi](#komorebi)
-      - [MusicBee](#musicbee)
-        - [Theme](#theme)
-      - [VSCodium](#vscodium)
-        - [Configuration](#configuration)
-      - [Windows Terminal](#windows-terminal)
-        - [Settings](#settings)
-      - [YASB Reborn](#yasb-reborn)
-- [⭐ Ending notes](#-ending-notes)
 
-## 🪟 Komorebi
+## ✅ Current Workflow w/ KomoEverything
 
-I like Komorebi, it's different and it's got cool animations.
-
-### 📸 Showcase
+<!-- ### 📸 Showcase
 
 #### 🖥️ Desktop
 
@@ -40,26 +17,33 @@ I like Komorebi, it's different and it's got cool animations.
 
 #### 👨‍💻 Workflow
 
-![A true workflow](./assets/workflow.png)
+![A true workflow](./assets/workflow.png) -->
+
+## ⚠️ Legacy Workflow w/ Komorebi & YASB
+
+<details>
+
+<summary>Old Workflow w/ Komorebi & YASB</summary>
+
+### 📸 Showcase
+
+#### 🖥️ Desktop
+
+![Default desktop](./assets/komo-yasb/desktop.jpg)
+
+#### 👨‍💻 Workflow
+
+![A true workflow](./assets/komo-yasb/workflow.png)
 
 ### ✨ Programs
 
 - [ButteryTaskbar2](https://github.com/LuisThiamNye/ButteryTaskbar2)
-- [Discord (Running Vencord)](https://github.com/Vendicated/Vencord)
 - [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 - [Komorebi](https://github.com/LGUG2Z/komorebi)
 - [MusicBee](https://getmusicbee.com/)
 - [VSCodium](https://vscodium.com/)
 - [Windows Terminal](https://github.com/microsoft/terminal)
-- [YASB Reborn](https://github.com/amnweb/yasb)
-
-#### ButteryTaskbar2
-
-Settings are defaulted. Ensure that it's ran on startup.
-
-#### Discord (Running Vencord)
-
-![Discord preview with theme](./assets/discord.png)
+- [Vesktop](https://github.com/Vencord/Vesktop)
 
 ##### Online Themes
 
@@ -69,20 +53,6 @@ https://raw.githubusercontent.com/SL4F/vencord/main/themes/SettingsModal/Setting
 https://refact0r.github.io/system24/theme/system24.theme.css
 https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css
 ```
-
-##### Plugins
-
-Only showing plugins that're *not* built-in:
-
-- [SoundBoardLogger](https://github.com/ImpishMoxxie/SoundBoardLogger)
-- [vc-message-logger-enhanced](https://github.com/Syncxv/vc-message-logger-enhanced)
-- [vencord-base64-decoder](https://github.com/ThePirateStoner/vencord-base64-decoder)
-
-#### Firefox
-
-![Firefox Tab](./assets/firefox.png)
-
-This Firefox instance is modified using a custom `userChrome.css` file. This is **not my code**. This is [Shimmer](https://github.com/nuclearcodecat/shimmer)! I enjoy it a lot, it has a good aesthetic, [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) support and animations.
 
 #### Komorebi
 
@@ -119,24 +89,13 @@ Please note that the yellow border around the window is managed by [komorebi](#k
 
 I have followed a tutorial online to heavily customise my user interface, font family and more. You can find my configuration [here](./config/Visual%20Studio%20Code/settings.json).
 
-#### Windows Terminal
-
-![Windows Terminal w/ splitting](./assets/terminals.png)
-
-I have modified Windows Terminal to be able to replicate my [wezterm config](./config/.wezterm.lua).
-
-##### Settings
-
-- [PowerShell](https://github.com/PowerShell/PowerShell) & Modules:
-  - [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
-  - [zoxide](https://github.com/ajeetdsouza/zoxide)
-- [Starship](https://starship.rs/)
-
 #### YASB Reborn
 
 This is the bar along the top of each image where visible.
 
 Install the bar at [this link](https://github.com/amnweb/yasb), enable startup & copy the `config.yaml` & `styles.css` into `~/.config/yasb/`.
+
+</details>
 
 # ⭐ Ending notes
 
