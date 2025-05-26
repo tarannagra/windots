@@ -16,6 +16,11 @@ Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
 ![Workflow.. kind of](./assets/komo-yasb/workflow.png)
 
+### 📝 TODO
+
+- [ ] Match everything to the same colourscheme. This includes nvim and the bar too. Maybe the bar -> nvim. This scheme is quite good for now.
+    - [ ] I guess the same is for the Obsidian app, but haven't *really* used it *that* much to go with a complete customisation again.
+
 # ⭐ Ending notes
 
 If you have found this useful or have taken anything here, I would appreciate a star on here ⭐
