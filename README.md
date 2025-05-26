@@ -10,7 +10,7 @@ Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
 #### 🖥️ Desktop
 
-![Default desktop](./assets/komo-yasb/desktop.jpg)
+![Default desktop](./assets/komo-yasb/desktop.png)
 
 #### 👨‍💻 Workflow
 
