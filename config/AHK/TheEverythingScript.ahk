@@ -11,7 +11,10 @@
 ;? App names
 ; if changing in the future, then it's easier
 explorer := "explorer"
-terminal := "alacritty"
+terminal := "wt"
+editor := "zed"
+wsl_instance_args := "--distribution-id {bf3b3642-2ec2-4c8a-8a5c-186c50849fe4} --cd ~"
+
 
 ;? Paths
 appdata_local := "C:\Users\subwa\AppData\Local"
@@ -22,7 +25,7 @@ script_location := Format('{}\.config\notifications\notify.py', EnvGet('USERPROF
 
 /**
      * @description - `Notify()` -> executes a pre-made script to send a Windows 11 "toast" to notify the user, based on the args. Supports custom images.
-     * 
+     *
      * Args:
      *  - title
      *  - body
@@ -60,17 +63,39 @@ Komorebic(command) {
 ;? win+shift+o -> Obsidian
 #+o:: {
     Notify(
-        "Opening Obsidian...", 
-        "Enjoy your note taking!", 
-        "Notifications", 
+        "Opening Obsidian...",
+        "Enjoy your note taking!",
+        "Notifications",
         "obsidian.png"
     )
     Run Format("{1}\Programs\Obsidian\Obsidian.exe", appdata_local)
 }
 
+;? win+shift+e -> Editor (add it in variables)
+; #+e:: {
+;     Notify(
+;         Format("Opening {}...", editor),
+;         "Code code code!",
+;         "Notifications",
+;         Format("{}.jpg", editor)
+;     )
+;     Run("zed")
+; }
+
+;? win+shift+s -> Screenshot (custom screenshotter)
+; #+s:: {
+;     Run("wscript C:\Users\subwa\.tools\screenshot.vbs")
+;     Notify(
+;         "Screenshot taken!",
+;         "Saved to disk and clipboard.",
+;         "Notifications",
+;         "camera.png"
+;     )
+; }
+
 ;? win+q -> Zen Browser
 #q:: {
-    Run(Format('"{}\Zen Browser\zen.exe"', EnvGet("ProgramFiles")))
+    Run(Format('"{}\BraveSoftware\Brave-Browser\Application\brave.exe"', EnvGet("ProgramFiles")))
 }
 
 ;? win+e -> Explorer (add it in variables)
@@ -88,12 +113,13 @@ Komorebic(command) {
     Run(terminal)
 }
 
+;** Hot-Reload of YASB
+
 ;? win+shift+b -> Restart the YASB Bar
 #+b:: {
-    MsgBox "Needs re-doing"
-    ; yasb_exec := Format('{}\Documents\yasb\src\main.py', EnvGet("USERPROFILE"))
-    ; Run(Format('python "{}"', yasb_exec))
+    Run("yasbc reload")
 }
+
 
 ;** Komorebi WM Specific
 
@@ -176,7 +202,7 @@ Komorebic(command) {
 ;? win+shift+space -> Toggle Floating
 #+space:: {
     Komorebic("toggle-float")
-} 
+}
 
 ;~ Focusing Workspaces
 
@@ -203,6 +229,28 @@ Komorebic(command) {
 ;? win+5 -> Focus Workspace: 5
 #5:: {
     Komorebic("focus-workspace 4")
+}
+
+;! For Kando specific
+
+;? win+[ -> Cycle Workspace Next
+#[:: {
+    Komorebic("cycle-workspace next")
+}
+
+;? win+] -> Cycle Workspace Previous
+#]:: {
+    Komorebic("cycle-workspace previous")
+}
+
+;? win+shift+[ -> Cycle Move Window Workspace Next
+#+[:: {
+    Komorebic("cycle-move-to-workspace next")
+}
+
+;? win+shift+] -> Cycle Move Window Workspace Next
+#+]:: {
+    Komorebic("cycle-move-to-workspace previous")
 }
 
 ;~ Move Window To Workspaces
