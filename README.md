@@ -1,6 +1,6 @@
 # Taran's windots - Komorebi Edition :D
 
-Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I like a clean but informational and functional working environment. Such, this has been born! I present my desktop, Kada.
+Hello! Welcome to the `komorebi` branch of my Windows config that's being used daily. I love a clean and powerful desktop. As most do, I constantly change, but for the past *five* ish months or so, I've loved the kanagawa colourscheme. So here, I present, my kanagawa based system.
 
 Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
@@ -10,16 +10,21 @@ Featured on [awesome komorebi](https://github.com/LGUG2Z/awesome-komorebi)!
 
 #### 🖥️ Desktop
 
-![Default desktop](./assets/komo-yasb/desktop.png)
+![Desktop](./assets/desktop.png)
 
 #### 👨‍💻 Workflow
 
-![Workflow.. kind of](./assets/komo-yasb/workflow.png)
+![Workflow](./assets/workflow.png)
 
-### 📝 TODO
+### ⚙️ Software Used 
 
-- [ ] Match everything to the same colourscheme. This includes nvim and the bar too. Maybe the bar -> nvim. This scheme is quite good for now.
-    - [ ] I guess the same is for the Obsidian app, but haven't *really* used it *that* much to go with a complete customisation again.
+In no particular order:
+
+- Obsidian
+- Neovim
+- Komorebi
+- YASB Reborn
+- OneCommander
 
 # ⭐ Ending notes
 
