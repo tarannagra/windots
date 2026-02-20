@@ -1,5 +1,8 @@
 # Taran's windots
 
+> [!WARNING]
+> This is unmaintained. I no longer use Windows as any of my operating systems.
+
 Hello! Welcome to the showcase of my Windows dotfiles (windots) that I use daily. I prefer the clean and minimal type of desktops and have created this thus far.
 
 # Important
